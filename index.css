@@ -3,7 +3,6 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  overflow-x: hidden;
 }
 
 html {
@@ -15,8 +14,11 @@ body {
   font-size: 18px;
   line-height: 1.6;
   text-align: center;
-  overflow-x: hidden;
   color: #385257;
+}
+.nav-container {
+  position: relative;
+  overflow-x: hidden;
 }
 section {
   margin: 20px 20px;
@@ -28,7 +30,6 @@ a {
 }
 .container {
   width: 100vw;
-  overflow-x: hidden;
 }
 .content-header {
   font-family: "Zeyada", cursive;
@@ -53,7 +54,7 @@ nav {
   width: 100%;
   padding: 0px 20px;
   background-color: #7a9ca3;
-  overflow-x: hidden;
+  position: relative;
 }
 
 .name {
@@ -87,11 +88,10 @@ nav {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
+  width: 100vw;
   transform: translateX(100%);
   transition: transform 0.5s ease-in;
   z-index: 20;
-  overflow-x: hidden;
 }
 
 .nav-links a {
