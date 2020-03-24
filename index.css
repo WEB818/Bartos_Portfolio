@@ -1,4 +1,4 @@
-/* || General styles */
+/* || General styles @320px*/
 * {
   box-sizing: border-box;
   margin: 0;
@@ -25,9 +25,12 @@ a {
   text-decoration: none;
   color: #cceaf0;
 }
+
 .container {
-  width: 100vw;
+  width: 99vw;
+  overflow-x: hidden;
 }
+
 .content-header {
   font-family: "Zeyada", cursive;
   font-size: 36px;
@@ -41,7 +44,8 @@ a {
   text-align: left;
   margin-top: 20px;
 }
-/* || Nav styles */
+
+/* || Nav styles @320px*/
 
 nav {
   display: flex;
@@ -118,9 +122,6 @@ nav {
   z-index: 30;
 }
 
-.hide-nav {
-  transform: translateX(100%);
-}
 @keyframes navLinkFade {
   from {
     opacity: 0;
@@ -142,14 +143,14 @@ nav {
   transform: rotate(45deg) translate(-5px, -6px);
 }
 
-/* || Header styles */
+/* || Header styles @320px*/
 .background {
   background: url("images/hero.jpg");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
-  width: 100vw;
+  width: 99vw;
 }
 
 .blur {
@@ -159,13 +160,13 @@ nav {
   background-size: cover;
   position: absolute;
   -webkit-filter: blur(2px);
-  width: 100vw;
+  width: 99vw;
   height: 26vh;
   top: 4vh;
 }
 
 .mask {
-  width: 100vw;
+  width: 99vw;
   height: 26vh;
   position: absolute;
   top: 60vh;
@@ -179,6 +180,7 @@ nav {
   top: 62vh;
   animation: blankout 10s ease forwards;
 }
+
 @keyframes blankout {
   0% {
     opacity: 0.4;
@@ -187,6 +189,7 @@ nav {
     opacity: 1;
   }
 }
+
 .title {
   color: #cceaf0;
   font-size: 14px;
@@ -199,6 +202,7 @@ nav {
   animation: flipcard 10s forwards;
   font-family: "Zeyada", cursive;
 }
+
 @keyframes flipcard {
   10% {
     content: "Designer";
@@ -257,7 +261,8 @@ nav {
   }
 }
 
-/* || Skills styles */
+/* || Skills styles @320px*/
+
 .skill {
   display: flex;
   flex-direction: column;
@@ -265,6 +270,9 @@ nav {
   font-family: "Montserrat", sans-serif;
   color: #385257;
   padding: 15px 0;
+}
+.skill-title {
+  padding: 0 20px;
 }
 .skillbar {
   width: 85vw;
@@ -313,7 +321,7 @@ nav {
   width: 65vw;
 }
 
-/* || Portfolio styles */
+/* || Portfolio styles @320px*/
 
 .feature {
   padding-bottom: 100px;
@@ -330,7 +338,10 @@ nav {
   height: 240px;
 }
 
-.frenmo-img {
+.second {
+  display: none;
+}
+.long-img {
   height: 460px;
 }
 .portfolio-subheader {
@@ -340,7 +351,10 @@ nav {
   background-color: #cceaf0;
   box-shadow: 5px 5px 10px #7a9ca3;
 }
-
+.img-container {
+  display: flex;
+  justify-content: space-around;
+}
 .upper {
   text-align: left;
 }
@@ -420,7 +434,7 @@ nav {
   color: white;
 }
 
-/* || Connect styles */
+/* || Connect styles @320px*/
 .contact {
   background-color: #7a9ca3;
   display: flex;
@@ -434,7 +448,8 @@ nav {
 .handle {
   font-size: 14px;
 }
-/* || Footer styles */
+
+/* || Footer styles @320px*/
 footer {
   background: #7a9ca3;
   color: #385257;
@@ -443,33 +458,388 @@ footer {
 }
 
 @media (min-width: 768px) {
+  /* || Nav styles @768px*/
   .nav-links {
     width: 50%;
+  }
+
+  /* || Header styles @768px*/
+
+  .blur {
+    -webkit-filter: blur(4px);
+    height: 36vh;
+  }
+
+  .mask {
+    top: 63vh;
+  }
+
+  /* || Skills styles @768px*/
+  .skill-title {
+    padding: 0 40px;
+  }
+
+  /* || Portfolio content styles @768px*/
+  .second {
+    display: flex;
+  }
+  .tech-stack {
+    justify-content: center;
+  }
+  .subheading {
+    text-align: center;
+  }
+  .side-note {
+    text-align: right;
+  }
+
+  /* || Connect styles @768px*/
+  .contact-container {
+    width: 50vw;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .contact {
+    margin: 10px auto;
+  }
+  .handle {
+    font-size: 20px;
   }
 }
 
 @media (min-width: 1024px) {
+  /* || Nav styles @1024px*/
   .burger {
     display: none;
-  }
-
-  .name {
-    display: block;
   }
 
   .nav-links {
     position: relative;
     display: flex;
     justify-content: flex-start;
+    align-items: center;
     flex-direction: row;
-    width: 30%;
+    width: 60%;
     height: 8vh;
     top: 0vh;
     margin-right: 10px;
+    transform: translateX(0%);
+    transition: none;
+  }
+
+  .nav-links a {
+    color: #385257;
   }
   .nav-links li {
     height: 8vh;
     opacity: 1;
-    width: 30%;
+    width: 80%;
+  }
+
+  .menu-item:hover {
+    color: #cceaf0;
+  }
+
+  /* || Header styles @1024px*/
+  .blur {
+    -webkit-filter: blur(4px);
+    height: 44vh;
+  }
+
+  .mask {
+    top: 63vh;
+  }
+
+  @keyframes flipcard {
+    10% {
+      content: "Designer";
+    }
+    20% {
+      content: "Entrepreneur";
+    }
+    25% {
+      content: "Writer";
+    }
+    30% {
+      content: "Coach";
+    }
+    35% {
+      content: "Ultrarunner";
+    }
+    40% {
+      content: "Creator";
+    }
+    41% {
+      content: "Learner";
+    }
+    42% {
+      content: "Thinker";
+    }
+    43% {
+      content: "Dreamer";
+    }
+    44% {
+      content: "Doer";
+    }
+    45% {
+      content: "Aerialist";
+    }
+    46% {
+      content: "Improviser";
+    }
+    47% {
+      content: "Traveler";
+    }
+    48% {
+      content: "Volunteer";
+    }
+    49% {
+      content: "Blogger";
+    }
+
+    50% {
+      content: "web developer";
+      font-size: 40px;
+    }
+
+    100% {
+      content: "wendy bartos";
+      font-size: 60px;
+      margin-top: 80px;
+      margin-left: 280px;
+    }
+  }
+
+  /* || Portfolio content styles @1024px*/
+  .content-header {
+    font-size: 60px;
+  }
+  .portfolio-subheader {
+    font-size: 30px;
+    padding: 20px 50px;
+  }
+  .feature-img {
+    width: 440px;
+    height: 440px;
+  }
+  .long-img {
+    height: 680px;
+    width: 400px;
+  }
+  .content {
+    margin-top: 50px;
+  }
+  .tech-stack {
+    flex-direction: column;
+  }
+  .langs,
+  .links {
+    width: 40vw;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .links {
+    padding: 20px;
+  }
+  .links:hover {
+    background-color: #385257;
+  }
+}
+
+@media (min-width: 1440px) {
+  /* || Header styles @1440px*/
+  .background {
+    background-size: contain;
+  }
+  .blur {
+    background-size: contain;
+    -webkit-filter: blur(4px);
+    height: 36vh;
+  }
+
+  .mask {
+    top: 60vh;
+  }
+  .header-container {
+    background-color: #7a9ca3;
+  }
+
+  @keyframes flipcard {
+    10% {
+      content: "Designer";
+    }
+    20% {
+      content: "Entrepreneur";
+    }
+    25% {
+      content: "Writer";
+    }
+    30% {
+      content: "Coach";
+    }
+    35% {
+      content: "Ultrarunner";
+    }
+    40% {
+      content: "Creator";
+    }
+    41% {
+      content: "Learner";
+    }
+    42% {
+      content: "Thinker";
+    }
+    43% {
+      content: "Dreamer";
+    }
+    44% {
+      content: "Doer";
+    }
+    45% {
+      content: "Aerialist";
+    }
+    46% {
+      content: "Improviser";
+    }
+    47% {
+      content: "Traveler";
+    }
+    48% {
+      content: "Volunteer";
+    }
+    49% {
+      content: "Blogger";
+    }
+
+    50% {
+      content: "web developer";
+      font-size: 40px;
+    }
+
+    100% {
+      content: "wendy bartos";
+      font-size: 100px;
+      margin-top: 100px;
+      margin-left: 280px;
+    }
+  }
+
+  /* || Skills styles @1440px*/
+  .skills-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  .skill {
+    width: 40vw;
+  }
+
+  .skillbar {
+    width: 40vw;
+  }
+
+  .html {
+    width: 38vw;
+  }
+  .css {
+    width: 39vw;
+  }
+  .js {
+    width: 39vw;
+  }
+  .sass {
+    width: 25vw;
+  }
+  .jquery {
+    width: 30vw;
+  }
+  .react {
+    width: 39vw;
+  }
+  .node {
+    width: 39vw;
+  }
+  .express {
+    width: 39vw;
+  }
+  .psql {
+    width: 39vw;
+  }
+  .wordpress {
+    width: 35vw;
+  }
+
+  /* || Portfolio content styles @1440px*/
+  .feature,
+  .bio-content {
+    width: 70vw;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .tech {
+    padding: 10px 50px;
+  }
+  .langs,
+  .links {
+    width: 30vw;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* || Connect styles @1440px*/
+  .contact-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .contact {
+    margin: 10px;
+    width: 30vw;
+    padding: 60px;
+  }
+
+  #email,
+  #github,
+  #linkedin {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 200px;
+    width: 500px;
+  }
+
+  #email:hover,
+  #github:hover,
+  #linkedin:hover {
+    background-color: #cceaf0;
+    font-family: "Zeyada", cursive;
+    font-size: 30px;
+  }
+
+  #email:hover::after {
+    content: "wendyebartos@gmail.com";
+  }
+
+  #github:hover::after {
+    content: "WEB818";
+  }
+  #linkedin:hover::after {
+    content: "wendybartos";
+  }
+
+  .handle {
+    display: none;
+  }
+
+  .fab,
+  .fas {
+    font-size: 40px;
+  }
+  /* || Footer styles @1440px*/
+  footer {
+    margin-top: 100px;
+    font-size: 32px;
   }
 }
