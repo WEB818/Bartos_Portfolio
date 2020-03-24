@@ -1,166 +1,370 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>WB Portfolio</title>
+    <link rel="shortcut icon" type="image/png" href="images/favicon.png" />
+    <title>Wendy E. Bartos | Software Engineer</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <link
       rel="stylesheet"
       type="text/css"
       href="//cdnjs.cloudflare.com/ajax/libs/normalize/6.0.0/normalize.css"
     />
     <link rel="stylesheet" type="text/css" href="index.css" />
+
     <link
-      href="https://fonts.googleapis.com/css?family=Allura"
+      href="https://fonts.googleapis.com/css?family=Montserrat|Zeyada&display=swap"
       rel="stylesheet"
     />
   </head>
-  <body class="container-flex">
-    <nav class="navbar navbar-default">
-      <div class="container">
-        <div class="navbar-header">
-          <div class="name navbar">
-            <a href="https://github.com/WEB818" target="_blank" class="name">
-              Wendy Bartos</a
-            >
-          </div>
-        </div>
-        <div class="toggle-menu">
-          <ul>
-            <li><a class="menu-item" href="#bio">Bio</a></li>
-            <li><a class="menu-item" href="#portfolio">Portfolio</a></li>
-            <li>
-              <a target="_blank" href="https://github.com/WEB818">Github</a>
-            </li>
-            <li><a target="_blank" href="https://linkedin.com">LinkedIn</a></li>
-          </ul>
-        </div>
+  <body>
+    <nav>
+      <div class="name">
+        <a target="_blank" href="https://github.com/WEB818" class="name">web</a>
       </div>
+
+      <div class="burger">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </div>
+
+      <ul class="nav-links">
+        <li><a class="menu-item" href="#bio">About me</a></li>
+        <li><a class="menu-item" href="#skills">Skills</a></li>
+        <li><a class="menu-item" href="#portfolio">Projects</a></li>
+        <li><a class="menu-item" href="#connect">Connect</a></li>
+      </ul>
     </nav>
 
     <main class="container">
-      <div id="resume">
-        <div class="padding">
-          <header>
-            <!-- flipcard through descriptions. End on "about me" -->
-            <h1><span class="edit"></span></h1>
-          </header>
+      <header class="background"></header>
+
+      <div class="mask" id="home">
+        <div class="blur"></div>
+        <div class="titles">
+          <h1 class="sub-titles"><span class="title"></span></h1>
         </div>
       </div>
-      <section>
-        <div id="bio" class="container">
-          <div class="padding">
-            <h2 class="main-header">About me</h2>
-            <p class="content">
-              I am a recent graduate of the Engineering Immersion Program at
-              Thinkful, a Chegg service.
-              <br /><br />
-              When I started on a path to being a full-stack web developer, I
-              felt like I found my tribe. I quickly discovered that a passion
-              for learning and pursuing varied interests were the norm amongst
-              web developers. In this tribe, ideas multiplied, formulating
-              layers and pathways unique to each contributor's creative insight.
-              <br /><br />
-              Ideas beget ideas, but ideas mean nothing without application.
-              Being a web developer has empowered me to harness my ideas, apply
-              my problem-solving skills to create efficient solutions, and
-              manifest them into reality.
-              <br /><br />
-              Outside of coding, I coach my clients to change their behavior and
-              to reach their health and fitness goals.
-            </p>
-          </div>
-        </div>
-      </section>
 
       <section>
-        <div class="container" id="portfolio">
-          <div class="padding">
-            <h2 class="main-header">Portfolio</h2>
-          </div>
+        <div id="bio">
+          <h2 class="content-header">Who I Am</h2>
         </div>
-      </section>
 
-      <section>
-        <h3 class="sub-header">Quiz App</h3>
-        <div class="quiz-app"></div>
         <p class="content">
-          One of my earliest projects, I combined my love of words and building
-          apps using JavaScript.
+          My zeal for creativity is renewed when I blah blah blah When I started
+          on a path to being a full-stack web developer, I felt like I found my
+          tribe. I quickly discovered that a passion for learning and pursuing
+          varied interests were the norm amongst web developers. In this tribe,
+          ideas multiplied, formulating layers and pathways unique to each
+          contributor's creative insight.
+          <br /><br />
+          Ideas beget ideas, but ideas mean nothing without application. Being a
+          web developer has empowered me to harness my ideas, apply my
+          problem-solving skills to create efficient solutions, and manifest
+          them into reality.
+          <br /><br />
+          Outside of coding, I coach my clients to change their behavior and to
+          reach their health and fitness goals.
         </p>
-        <br />
-        <p>Technologies: HTML, CSS, JavaScript, jQuery</p>
-        <div class="links">
-          <a
-            target="_blank"
-            href="https://github.com/thinkful-ei-iguana/Wendy-Quiz-App"
-            >Github</a
-          ><span>
-            |
-            <a
-              target="_blank"
-              href="https://thinkful-ei-iguana.github.io/Wendy-Quiz-App/"
-              >Demo</a
-            ></span
-          >
-        </div>
       </section>
 
       <section>
-        <h3 class="sub-header">Bookmarks App</h3>
-        <div class="bookmarks-video">
-          <video autoplay loop>
-            <source src="/images/bookmarks-app-h264.mp4" type="video/mp4" />
-
-            Sorry, your browser doesn't support embedded videos.
-          </video>
+        <div id="skills">
+          <h2 class="content-header">What I Offer</h2>
         </div>
-        <div class="bookmark-desc">
-          <p class="content">
-            Here, I combined my need to stay organized with my love of building
-            tools that help me stay organized! My JavaScript and jQuery skills
-            shine through in this project to make a single-page application that
-            fully integrates with Thinkful's API.
-          </p>
-          <br />
-          <p>Technologies: HTML, CSS, JavaScript, jQuery</p>
-          <div class="links">
-            <a
-              target="_blank"
-              href="https://github.com/thinkful-ei-iguana/Wendy-bookmarks-app"
-              >Github</a
-            ><span>
-              |
-              <a
-                target="_blank"
-                href="https://thinkful-ei-iguana.github.io/Wendy-bookmarks-app/"
-                >Demo</a
-              ></span
-            >
+        <div class="skill">
+          <h4>HTML5</h4>
+          <div class="skillbar">
+            <div class="track html"></div>
+          </div>
+        </div>
+        <div class="skill">
+          <h4>CSS3</h4>
+          <div class="skillbar">
+            <div class="track css"></div>
+          </div>
+        </div>
+        <div class="skill">
+          <h4>JavaScript</h4>
+          <div class="skillbar">
+            <div class="track js"></div>
+          </div>
+        </div>
+        <div class="skill">
+          <h4>Sass</h4>
+          <div class="skillbar">
+            <div class="track sass"></div>
+          </div>
+        </div>
+        <div class="skill">
+          <h4>jQuery</h4>
+          <div class="skillbar">
+            <div class="track jquery"></div>
+          </div>
+        </div>
+        <div class="skill">
+          <h4>ReactJS</h4>
+          <div class="skillbar">
+            <div class="track react"></div>
+          </div>
+        </div>
+        <div class="skill">
+          <h4>Node.js</h4>
+          <div class="skillbar">
+            <div class="track node"></div>
+          </div>
+        </div>
+        <div class="skill">
+          <h4>Express.js</h4>
+          <div class="skillbar">
+            <div class="track express"></div>
+          </div>
+        </div>
+        <div class="skill">
+          <h4>PostgreSQL</h4>
+          <div class="skillbar">
+            <div class="track psql"></div>
+          </div>
+        </div>
+        <div class="skill">
+          <h4>WordPress</h4>
+          <div class="skillbar">
+            <div class="track wordpress"></div>
           </div>
         </div>
       </section>
 
-      <!-- <section>
-        <h2 class="project3">Project 3</h2>
-        <div class=""></div>
-        <a href="">Github</a><span> | <a href="">Demo</a></span>
+      <section>
+        <div id="portfolio">
+          <h2 class="content-header">What I Do</h2>
+        </div>
+
+        <div class="feature">
+          <div class="feature-wrap">
+            <h3 class="portfolio-subheader upper">Create accountability...</h3>
+            <img
+              src="images/wehive.jpg"
+              alt="wehive dashboard"
+              class="feature-img"
+            />
+            <h3 class="portfolio-subheader lower">
+              ...together, <span class="wehive">WeHive</span>
+            </h3>
+          </div>
+          <div class="content">
+            A goal without structure is a dream. Add structures, and your dreams
+            become reality. I'm passionate about using technology to create
+            those structures, and I believe in sharing those structures with
+            others.
+            <br /><br />
+            WeHive is a responsive React app, with authentication, in which
+            users can create accountability groups to track their progress and
+            motivate each other.
+          </div>
+
+          <div class="tech-stack">
+            <div class="subheading">Technologies</div>
+            <div class="langs">
+              <div class="tech react-tech">ReactJS</div>
+              <div class="tech css-tech">CSS</div>
+              <div class="tech node-tech">Node.js</div>
+              <div class="tech express-tech">Express.js</div>
+              <div class="tech psql-tech">PostgreSQL</div>
+              <div class="tech mc-tech">Mocha & Chai</div>
+            </div>
+          </div>
+
+          <div class="feature-links">
+            <div class="subheading">Links</div>
+            <a target="_blank" href="https://wehive.now.sh/">
+              <div class="links">
+                <i class="fas fa-link"></i>
+                <div>Demo</div>
+              </div>
+            </a>
+            <a target="_blank" href="https://github.com/WEB818/we-hive-app">
+              <div class="links">
+                <i class="fab fa-github"></i>
+                <div>Client</div>
+              </div>
+            </a>
+            <a target="_blank" href="https://github.com/WEB818/we-hive-server">
+              <div class="links">
+                <i class="fab fa-github"></i>
+                <div>Server</div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="feature">
+          <div class="feature-wrap">
+            <h3 class="portfolio-subheader upper">Teach others...</h3>
+
+            <img
+              src="images/spacedbox.jpg"
+              alt="spaced box flashcard"
+              class="feature-img"
+            />
+            <h3 class="portfolio-subheader lower">
+              ...with <span class="spacedbox">Spaced Box</span>*
+            </h3>
+          </div>
+          <div class="content">
+            I'm passionate about harnessing technology to educate. Spaced Box is
+            a responsive React app, with authentication, that utilizes the
+            spaced repetition technique to help users learn Hungarian.
+            <br /><br />
+            Our server evaluates a user's response to a given word and adjusts
+            the word's memory value in our database, accordingly. The memory
+            value then determines the frequency in which the word is displayed
+            to the user. This technique has proven effective in improving
+            long-term memory retention.
+
+            <div class="side-note">
+              * in collaboration with partner.
+              <div>Design Lead: Wendy Bartos</div>
+            </div>
+          </div>
+
+          <div class="tech-stack">
+            <div class="subheading">Technologies</div>
+            <div class="langs">
+              <div class="tech react-tech">ReactJS</div>
+              <div class="tech css-tech">CSS</div>
+              <div class="tech node-tech">Node.js</div>
+              <div class="tech express-tech">Express.js</div>
+              <div class="tech psql-tech">PostgreSQL</div>
+              <div class="tech mc-tech">Mocha & Chai</div>
+              <div class="tech cy-tech">Cypress</div>
+            </div>
+          </div>
+
+          <div class="feature-links">
+            <div class="subheading">Links</div>
+            <a target="_blank" href="https://spacedbox.now.sh/">
+              <div class="links">
+                <i class="fas fa-link"></i>
+                <div>Demo</div>
+              </div>
+            </a>
+            <a target="_blank" href="https://github.com/WEB818/spaced_box">
+              <div class="links">
+                <i class="fab fa-github"></i>
+                <div>Client</div>
+              </div>
+            </a>
+            <a target="_blank" href="https://github.com/WEB818/spaced_box_api">
+              <div class="links">
+                <i class="fab fa-github"></i>
+                <div>Server</div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="feature">
+          <div class="feature-wrap">
+            <h3 class="portfolio-subheader upper">
+              Do good things. Build community...
+            </h3>
+            <img
+              src="images/frenmo.jpg"
+              alt="frenmo feed page"
+              class="feature-img frenmo-img"
+            />
+
+            <h3 class="portfolio-subheader lower">
+              ...with <span class="frenmo">Frenmo</span>*
+            </h3>
+          </div>
+          <div class="content">
+            I'm passionate about upbuilding community through technology.
+            Frenmo, a responsive React app with authentication, is a trade
+            marketplace that enables its users to swap non-monetary favors with
+            their friends, family, neighbors, community, and the world.
+
+            <div class="side-note">
+              * in collaboration with team.
+              <div>Design Lead: Wendy Bartos</div>
+            </div>
+          </div>
+
+          <div class="tech-stack">
+            <div class="subheading">Technologies</div>
+            <div class="langs">
+              <div class="tech react-tech">ReactJS</div>
+              <div class="tech css-tech">CSS</div>
+              <div class="tech sass-tech">Sass</div>
+              <div class="tech node-tech">Node.js</div>
+              <div class="tech express-tech">Express.js</div>
+              <div class="tech psql-tech">PostgreSQL</div>
+              <div class="tech mc-tech">Mocha & Chai</div>
+            </div>
+          </div>
+
+          <div class="feature-links">
+            <div class="subheading">Links</div>
+            <a target="_blank" href="https://frenmo.now.sh/">
+              <div class="links">
+                <i class="fas fa-link"></i>
+                <div>Demo</div>
+              </div>
+            </a>
+            <a target="_blank" href="https://github.com/WEB818/frenmo-client">
+              <div class="links">
+                <i class="fab fa-github"></i>
+                <div>Client</div>
+              </div>
+            </a>
+            <a target="_blank" href="https://github.com/WEB818/frenmo-server">
+              <div class="links">
+                <i class="fab fa-github"></i>
+                <div>Server</div>
+              </div>
+            </a>
+          </div>
+        </div>
       </section>
 
       <section>
-        <h2 class="project4">Project 4</h2>
-        <div class=""></div>
-        <a href="">Github</a><span> | <a href="">Demo</a></span>
-      </section> -->
+        <div id="connect">
+          <h2 class="content-header">Where To Find Me</h2>
+        </div>
+        <div class="contact">
+          <a target="_blank" href="mailto:wendyebartos@gmail.com">
+            <i class="fas fa-envelope"></i>
+            <div class="handle">wendyebartos@gmail.com</div>
+          </a>
+        </div>
+        <div class="contact">
+          <a target="_blank" href="https://github.com/WEB818">
+            <i class="fab fa-github"></i>
+            <div class="handle">WEB818</div>
+          </a>
+        </div>
+
+        <div class="contact">
+          <a target="_blank" href="https://www.linkedin.com/in/wendybartos/">
+            <i class="fab fa-linkedin"></i>
+            <div class="handle">wendybartos</div>
+          </a>
+        </div>
+      </section>
     </main>
     <footer>
-      Contact me at
-      <a href="mailto:wendybartos@gmail.com" target="_blank" class="contact"
-        >wendybartos@gmail.com</a
-      >
+      Wendy E. Bartos | Software Engineer
     </footer>
     <script
       src="https://code.jquery.com/jquery-3.4.1.js"
       integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/184f968435.js"
       crossorigin="anonymous"
     ></script>
     <script src="index.js"></script>
