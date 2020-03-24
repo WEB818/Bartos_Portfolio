@@ -16,10 +16,7 @@ body {
   text-align: center;
   color: #385257;
 }
-.nav-container {
-  position: relative;
-  overflow-x: hidden;
-}
+
 section {
   margin: 20px 20px;
 }
@@ -54,7 +51,8 @@ nav {
   width: 100%;
   padding: 0px 20px;
   background-color: #7a9ca3;
-  position: relative;
+  position: fixed;
+  z-index: 10;
 }
 
 .name {
@@ -78,7 +76,10 @@ nav {
   border-radius: 2px;
   transition: all 0.3s ease;
 }
-
+.nav-container {
+  position: fixed;
+  overflow-x: hidden;
+}
 .nav-links {
   position: absolute;
   right: 0px;
@@ -117,6 +118,9 @@ nav {
   z-index: 30;
 }
 
+.hide-nav {
+  transform: translateX(100%);
+}
 @keyframes navLinkFade {
   from {
     opacity: 0;
@@ -144,7 +148,7 @@ nav {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 92vh;
+  height: 100vh;
   width: 100vw;
 }
 
@@ -164,7 +168,7 @@ nav {
   width: 100vw;
   height: 26vh;
   position: absolute;
-  top: 62vh;
+  top: 60vh;
   overflow: hidden;
 }
 
