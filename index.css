@@ -46,7 +46,6 @@ a {
 }
 
 /* || Nav styles @320px*/
-
 nav {
   display: flex;
   justify-content: space-between;
@@ -606,7 +605,6 @@ footer {
     100% {
       content: "wendy bartos";
       font-size: 60px;
-      margin-top: 80px;
       margin-left: 280px;
     }
   }
@@ -719,8 +717,7 @@ footer {
 
     100% {
       content: "wendy bartos";
-      font-size: 100px;
-      margin-top: 100px;
+      font-size: 75px;
       margin-left: 280px;
     }
   }
