@@ -2,12 +2,14 @@
 <html lang="en">
   <head>
     <link rel="shortcut icon" type="image/png" href="images/favicon.png" />
+
     <title>Wendy E. Bartos | Software Engineer</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta property="og:title" content="Wendy's Portfolio" />
+
     <meta
       property="og:image"
-      content="https://www.canva.com/design/DAD_oYXUkBk/RheNkNWfBaSqiAPXiPPsDA/view?utm_content=DAD_oYXUkBk&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink"
+      content="https://live.staticflickr.com/65535/50023663961_6f2ea58e27_o.png"
     />
     <meta property="og:description" content="Samples of my work" />
     <meta property="og:url" content="https://web818.github.io/wendyebartos/" />
@@ -20,6 +22,11 @@
       type="text/css"
       href="//cdnjs.cloudflare.com/ajax/libs/normalize/6.0.0/normalize.css"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" type="text/css" href="index.css" />
 
     <link
@@ -29,6 +36,10 @@
     <link
       href="https://fonts.googleapis.com/css?family=Zeyada&display=swap"
       rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
     />
   </head>
   <body>
@@ -120,7 +131,7 @@
             </div>
           </div>
           <div class="skill">
-            <h4 class="skill-title">Sass</h4>
+            <h4 class="skill-title">Sass/Scss</h4>
             <div class="skillbar">
               <div class="track sass"></div>
             </div>
@@ -168,211 +179,294 @@
         <div id="portfolio">
           <h2 class="content-header">What I Do</h2>
         </div>
-        <div class="feature-container"></div>
-        <div class="feature">
-          <div class="feature-wrap">
-            <h3 class="portfolio-subheader upper">
-              Create accountability...
-            </h3>
-            <div class="img-container">
+
+        <!-- Project 1 - WeHive -->
+        <h3 class="project-title">WeHive</h3>
+
+        <!-- Swiper -->
+
+        <div class="swiper-container wehive-feature">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="divider-parent">
+                <div class="divider wehive"></div>
+              </div>
+              <h4 class="project-title">Create accountability</h4>
               <img
-                src="images/wehive.jpg"
-                alt="wehive dashboard"
-                class="feature-img long-img second"
-              />
-              <img
-                src="images/hivemind.jpg"
-                alt="wehive dashboard"
-                class="feature-img long-img"
+                src="images/phonewh.png"
+                alt="wehive hivemind view"
+                class="phone-img"
               />
             </div>
-            <h3 class="portfolio-subheader lower">
-              ...together, <span class="wehive">WeHive</span>
-            </h3>
-          </div>
-          <div class="content">
-            A goal without structure is a dream. Add structures, and your dreams
-            become reality. I'm passionate about using technology to create
-            those structures, and I believe in sharing those structures with
-            others.
-            <br /><br />
-            WeHive is a responsive React app, with authentication, in which
-            users can create accountability groups to track their progress and
-            motivate each other.
-          </div>
 
-          <div class="tech-stack">
-            <div class="subheading">Technologies</div>
-            <div class="langs">
-              <div class="tech react-tech">ReactJS</div>
-              <div class="tech css-tech">CSS</div>
-              <div class="tech node-tech">Node.js</div>
-              <div class="tech express-tech">Express.js</div>
-              <div class="tech psql-tech">PostgreSQL</div>
-              <div class="tech mc-tech">Mocha & Chai</div>
+            <div class="swiper-slide">
+              <div class="divider-parent">
+                <div class="divider wehive"></div>
+              </div>
+              <h4 class="project-title">Together</h4>
+              <img
+                src="images/tabletwh.png"
+                alt="wehive member view"
+                class="tab-img"
+              />
+            </div>
+
+            <div class="swiper-slide">
+              <div class="divider-parent">
+                <div class="divider wehive"></div>
+              </div>
+              <h4 class="project-title">We Achieve</h4>
+              <img
+                src="images/laptopwh.png"
+                alt="wehive member view"
+                class="lap-img"
+              />
             </div>
           </div>
+          <!-- Add Pagination -->
+          <div class="swiper-pagination"></div>
+        </div>
 
-          <div class="feature-links">
-            <div class="subheading">Links</div>
-            <a target="_blank" href="https://wehive.now.sh/">
-              <div class="links">
-                <i class="fas fa-link"></i>
-                <div>Demo</div>
-              </div>
-            </a>
-            <a target="_blank" href="https://github.com/WEB818/we-hive-app">
-              <div class="links">
-                <i class="fab fa-github"></i>
-                <div>Client</div>
-              </div>
-            </a>
-            <a target="_blank" href="https://github.com/WEB818/we-hive-server">
-              <div class="links">
-                <i class="fab fa-github"></i>
-                <div>Server</div>
-              </div>
-            </a>
+        <div class="tech-stack">
+          <h4 class="subheading">Tech Stack</h4>
+
+          <div class="langs">
+            <div class="tech mc-tech" data-aos="mc-tech">Mocha & Chai</div>
+            <div class="tech css-tech" data-aos="css-tech">CSS</div>
+            <div class="tech react-tech" data-aos="react-tech">ReactJS</div>
+            <div class="tech node-tech" data-aos="node-tech">Node.js</div>
+            <div class="tech express-tech" data-aos="express-tech">
+              Express.js
+            </div>
+            <div class="tech psql-tech" data-aos="psql-tech">PostgreSQL</div>
           </div>
         </div>
 
-        <div class="feature">
-          <div class="feature-wrap">
-            <h3 class="portfolio-subheader upper">Teach others...</h3>
-            <div class="img-container">
+        <h4 class="subheading">Links</h4>
+        <div class="feature-links">
+          <a target="_blank" href="https://we-hive-app.now.sh/">
+            <div class="links">
+              <i class="fas fa-link"></i>
+              <div>Demo</div>
+            </div>
+          </a>
+
+          <a target="_blank" href="https://github.com/WEB818/we-hive-app">
+            <div class="links">
+              <i class="fab fa-github"></i>
+              <div>Client</div>
+            </div>
+          </a>
+
+          <a target="_blank" href="https://github.com/WEB818/we-hive-server">
+            <div class="links">
+              <i class="fab fa-github"></i>
+              <div>Server</div>
+            </div>
+          </a>
+        </div>
+
+        <div class="content">
+          A goal without structure is a dream. Add structures, and your dreams
+          become reality. I'm passionate about using technology to create those
+          structures, and I believe in sharing those structures with others.
+          <br /><br />
+          WeHive is a responsive React app, with authentication, in which users
+          can create accountability groups to track their progress and motivate
+          each other.
+        </div>
+
+        <!-- Project 2 - Spaced Box -->
+        <h3 class="project-title">Spaced Box</h3>
+        <!-- Swiper -->
+        <div class="swiper-container sb-feature">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="divider-parent">
+                <div class="divider spacedbox"></div>
+              </div>
+              <h4 class="project-title">Teach others</h4>
+              <img src="images/phonesb.png" alt="word view" class="phone-img" />
+            </div>
+
+            <div class="swiper-slide">
+              <div class="divider-parent">
+                <div class="divider spacedbox"></div>
+              </div>
+              <h4 class="project-title">Effectively</h4>
               <img
-                src="images/spacedboxdev.jpg"
-                alt="spaced box flashcard"
-                class="feature-img"
+                src="images/tabletsb.png"
+                alt="guess response view"
+                class="tab-img"
               />
+            </div>
+            <div class="swiper-slide">
+              <div class="divider-parent">
+                <div class="divider spacedbox"></div>
+              </div>
+              <h4 class="project-title">Using Tech</h4>
+
               <img
-                src="images/spresponse.jpg"
-                alt="spaced box flashcard"
-                class="feature-img second"
+                src="images/laptopsb.png"
+                alt="word list view"
+                class="lap-img"
               />
             </div>
-            <h3 class="portfolio-subheader lower">
-              ...with <span class="spacedbox">Spaced Box</span>*
-            </h3>
           </div>
-          <div class="content">
-            I'm passionate about harnessing technology to educate. Spaced Box is
-            a responsive React app, with authentication, that utilizes the
-            spaced repetition technique to help users learn Hungarian.
-            <br /><br />
-            Our server evaluates a user's response to a given word and adjusts
-            the word's memory value in our database, accordingly. The memory
-            value then determines the frequency in which the word is displayed
-            to the user. This technique has proven effective in improving
-            long-term memory retention.
+          <!-- Add Pagination -->
+          <div class="swiper-pagination"></div>
+        </div>
 
-            <div class="side-note">
-              * in collaboration with partner.
-              <div>Design Lead: Wendy Bartos</div>
+        <div class="tech-stack">
+          <h4 class="subheading">Tech Stack</h4>
+          <div class="langs">
+            <div class="tech react-tech sb" data-aos="react-tech sb">
+              ReactJS
             </div>
-          </div>
-
-          <div class="tech-stack">
-            <div class="subheading">Technologies</div>
-            <div class="langs">
-              <div class="tech react-tech">ReactJS</div>
-              <div class="tech css-tech">CSS</div>
-              <div class="tech node-tech">Node.js</div>
-              <div class="tech express-tech">Express.js</div>
-              <div class="tech psql-tech">PostgreSQL</div>
-              <div class="tech mc-tech">Mocha & Chai</div>
-              <div class="tech cy-tech">Cypress</div>
+            <div class="tech css-tech sb" data-aos="css-tech sb">CSS</div>
+            <div class="tech node-tech sb" data-aos="node-tech sb">Node.js</div>
+            <div class="tech express-tech sb" data-aos="express-tech sb">
+              Express.js
             </div>
-          </div>
-
-          <div class="feature-links">
-            <div class="subheading">Links</div>
-            <a target="_blank" href="https://spacedbox.now.sh/">
-              <div class="links">
-                <i class="fas fa-link"></i>
-                <div>Demo</div>
-              </div>
-            </a>
-            <a target="_blank" href="https://github.com/WEB818/spaced_box">
-              <div class="links">
-                <i class="fab fa-github"></i>
-                <div>Client</div>
-              </div>
-            </a>
-            <a target="_blank" href="https://github.com/WEB818/spaced_box_api">
-              <div class="links">
-                <i class="fab fa-github"></i>
-                <div>Server</div>
-              </div>
-            </a>
+            <div class="tech psql-tech" data-aos="psql-tech">PostgreSQL</div>
+            <div class="tech mc-tech sb" data-aos="mc-tech sb">
+              Mocha & Chai
+            </div>
+            <div class="tech cy-tech" data-aos="cy-tech">Cypress</div>
           </div>
         </div>
-        <div class="feature">
-          <div class="feature-wrap">
-            <h3 class="portfolio-subheader upper">
-              Do good things. Build community...
-            </h3>
-            <div class="img-container">
+        <h4 class="subheading">Links</h4>
+        <div class="feature-links">
+          <a target="_blank" href="https://spaced-repetition-beige.vercel.app/">
+            <div class="links">
+              <i class="fas fa-link"></i>
+              <div>Demo</div>
+            </div>
+          </a>
+          <a target="_blank" href="https://github.com/WEB818/spaced_box">
+            <div class="links">
+              <i class="fab fa-github"></i>
+              <div>Client</div>
+            </div>
+          </a>
+          <a target="_blank" href="https://github.com/WEB818/spaced_box_api">
+            <div class="links">
+              <i class="fab fa-github"></i>
+              <div>Server</div>
+            </div>
+          </a>
+        </div>
+        <div class="content">
+          I'm passionate about harnessing technology to educate. Spaced Box is a
+          responsive React app, with authentication, that utilizes the spaced
+          repetition technique to help users learn Hungarian.
+          <br /><br />
+          Our server evaluates a user's response to a given word and adjusts the
+          word's memory value in our database, accordingly. The memory value
+          then determines the frequency in which the word is displayed to the
+          user. This technique has proven effective in improving long-term
+          memory retention.
+
+          <div class="side-note">
+            * in collaboration with partner.
+            <div>Design Lead: Wendy Bartos</div>
+          </div>
+        </div>
+
+        <!-- Project 3 - Frenmo -->
+        <h3 class="project-title">Frenmo</h3>
+        <!-- Swiper -->
+        <div class="swiper-container frenmo-feature">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="divider-parent">
+                <div class="divider frenmo"></div>
+              </div>
+              <h4 class="project-title">Do Good Things</h4>
               <img
-                src="images/frenmo.jpg"
-                alt="frenmo feed page"
-                class="feature-img long-img"
+                src="images/phonefrenmo.png"
+                alt="Frenmo by category view"
+                class="phone-img"
               />
+            </div>
+
+            <div class="swiper-slide">
+              <div class="divider-parent">
+                <div class="divider frenmo"></div>
+              </div>
+              <h4 class="project-title">Swap Favors</h4>
               <img
-                src="images/frenmodetail.jpg"
-                alt="frenmo feed page"
-                class="feature-img second long-img"
+                src="images/tabletfrenmo.png"
+                alt="Frenmo Friends Feed view"
+                class="tab-img"
               />
             </div>
-            <h3 class="portfolio-subheader lower">
-              ...with <span class="frenmo">Frenmo</span>*
-            </h3>
-          </div>
-          <div class="content">
-            I'm passionate about upbuilding community through technology.
-            Frenmo, a responsive React app with authentication, is a trade
-            marketplace that enables its users to swap non-monetary favors with
-            their friends, family, neighbors, community, and the world.
+            <div class="swiper-slide">
+              <div class="divider-parent">
+                <div class="divider frenmo"></div>
+              </div>
+              <h4 class="project-title">Build Community</h4>
 
-            <div class="side-note">
-              * in collaboration with team.
-              <div>Design Lead: Wendy Bartos</div>
+              <img
+                src="images/laptopfrenmo.png"
+                alt="Homepage"
+                class="lap-img"
+              />
             </div>
           </div>
+          <!-- Add Pagination -->
+          <div class="swiper-pagination"></div>
+        </div>
 
-          <div class="tech-stack">
-            <div class="subheading">Technologies</div>
-            <div class="langs">
-              <div class="tech react-tech">ReactJS</div>
-              <div class="tech css-tech">CSS</div>
-              <div class="tech sass-tech">Sass</div>
-              <div class="tech node-tech">Node.js</div>
-              <div class="tech express-tech">Express.js</div>
-              <div class="tech psql-tech">PostgreSQL</div>
-              <div class="tech mc-tech">Mocha & Chai</div>
+        <div class="tech-stack">
+          <h4 class="subheading">Tech Stack</h4>
+
+          <div class="langs">
+            <div class="tech react-tech fren" data-aos="react-tech fren">
+              ReactJS
             </div>
+            <div class="tech sass-tech" data-aos="sass-tech">Sass/SCSS</div>
+            <div class="tech node-tech" data-aos="node-tech">Node.js</div>
+            <div class="tech express-tech" data-aos="express-tech">
+              Express.js
+            </div>
+            <div class="tech psql-tech" data-aos="psql-tech">PostgreSQL</div>
+            <div class="tech mc-tech" data-aos="mc-tech">Mocha & Chai</div>
           </div>
+        </div>
 
-          <div class="feature-links">
-            <div class="subheading">Links</div>
-            <a target="_blank" href="https://frenmo.now.sh/">
-              <div class="links">
-                <i class="fas fa-link"></i>
-                <div>Demo</div>
-              </div>
-            </a>
-            <a target="_blank" href="https://github.com/WEB818/frenmo-client">
-              <div class="links">
-                <i class="fab fa-github"></i>
-                <div>Client</div>
-              </div>
-            </a>
-            <a target="_blank" href="https://github.com/WEB818/frenmo-server">
-              <div class="links">
-                <i class="fab fa-github"></i>
-                <div>Server</div>
-              </div>
-            </a>
+        <h4 class="subheading">Links</h4>
+        <div class="feature-links">
+          <a target="_blank" href="https://frenmo-client.vercel.app/">
+            <div class="links">
+              <i class="fas fa-link"></i>
+              <div>Demo</div>
+            </div>
+          </a>
+
+          <a target="_blank" href="https://github.com/WEB818/frenmo-client">
+            <div class="links">
+              <i class="fab fa-github"></i>
+              <div>Client</div>
+            </div>
+          </a>
+          <a target="_blank" href="https://github.com/WEB818/frenmo-server">
+            <div class="links">
+              <i class="fab fa-github"></i>
+              <div>Server</div>
+            </div>
+          </a>
+        </div>
+
+        <div class="content">
+          I'm passionate about upbuilding community through technology. Frenmo,
+          a responsive React app with authentication, is a trade marketplace
+          that enables its users to swap non-monetary favors with their friends,
+          family, neighbors, community, and the world.
+
+          <div class="side-note">
+            * in collaboration with team.
+            <div>Design Lead: Wendy Bartos</div>
           </div>
         </div>
       </section>
@@ -417,5 +511,23 @@
       crossorigin="anonymous"
     ></script>
     <script src="index.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+      var swiper = new Swiper(".swiper-container", {
+        slidesPerView: 1,
+        spaceBetween: 0,
+        centeredSlides: true,
+        grabCursor: true,
+        loop: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+      });
+    </script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>

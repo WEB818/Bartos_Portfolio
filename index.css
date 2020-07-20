@@ -18,7 +18,7 @@ body {
 }
 
 section {
-  margin: 20px 20px;
+  margin: 20px;
 }
 
 a {
@@ -32,7 +32,7 @@ a {
 }
 
 .content-header {
-  font-family: "Zeyada", cursive;
+  font-family: "Bebas Neue", cursive;
   font-size: 36px;
   color: #385257;
   text-decoration: underline #cceaf0;
@@ -41,8 +41,8 @@ a {
 }
 
 .content {
-  text-align: left;
-  margin-top: 20px;
+  text-align: center;
+  margin: 60px auto;
 }
 
 /* || Nav styles @320px*/
@@ -159,13 +159,13 @@ nav {
   background-size: cover;
   position: absolute;
   -webkit-filter: blur(2px);
-  width: 99vw;
+  width: 100vw;
   height: 26vh;
-  top: 4vh;
+  top: 3vh;
 }
 
 .mask {
-  width: 99vw;
+  width: 100vw;
   height: 26vh;
   position: absolute;
   top: 60vh;
@@ -173,7 +173,7 @@ nav {
 }
 
 .titles > .sub-titles {
-  background: #574230;
+  background: #385257;
   width: 100vw;
   height: 26vh;
   top: 62vh;
@@ -321,116 +321,240 @@ nav {
 }
 
 /* || Portfolio styles @320px*/
-
-.feature {
-  padding-bottom: 100px;
-}
-
-.wehive,
-.spacedbox,
-.frenmo {
-  text-decoration: underline #385257;
-}
-
-.feature-img {
-  width: 240px;
-  height: 240px;
-}
-
-.second {
-  display: none;
-}
-.long-img {
-  height: 460px;
-}
-.portfolio-subheader {
-  padding: 20px 6px;
-}
-.feature-wrap {
-  background-color: #cceaf0;
-  box-shadow: 5px 5px 10px #7a9ca3;
-}
-.img-container {
-  display: flex;
-  justify-content: space-around;
-}
-.upper {
-  text-align: left;
-}
-.lower {
-  text-align: right;
-}
-.links {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  background-color: #7a9ca3;
-  border-radius: 3px;
-  width: 280px;
-  margin: 2px auto;
-  padding: 10px;
-}
-.fab,
-.fas {
+.project-title {
+  background-color: #385257;
   color: #cceaf0;
-  font-size: 30px;
+  padding: 10px 0;
 }
-.tech-stack {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+.divider-parent {
+  position: relative;
 }
+.divider {
+  position: absolute;
+  height: 2px;
+  left: 30%;
+  right: 30%;
+}
+.swiper-container {
+  height: 450px;
+}
+.wehive-feature {
+  background-color: #ffc40075;
+}
+.wehive {
+  background-color: #ffc400;
+}
+.sb-feature {
+  background-color: #41704c75;
+}
+.spacedbox {
+  background-color: #41704c;
+}
+.frenmo-feature {
+  background-color: #a8ffdc75;
+}
+.frenmo {
+  background-color: #a8ffdc;
+}
+.swiper-wrapper {
+  align-items: center;
+}
+
+.swiper-slide,
+.phone-img,
+.tab-img,
+.lap-img {
+  width: 260px;
+  height: 350px;
+}
+
 .subheading {
   text-decoration: underline;
   text-transform: uppercase;
-  text-align: left;
+  text-align: center;
   margin: 30px 0px;
 }
-.side-note {
-  font-style: italic;
-  font-size: 16px;
-  margin-top: 20px;
+
+.tech-stack {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 .langs {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-}
-.tech {
-  margin: 1px;
-  padding: 6px;
-  flex-grow: 1;
-  border-radius: 3px;
+  position: relative;
 }
 
-.react-tech {
-  background-color: rgb(97, 218, 251);
+/* Tech Animations */
+@keyframes fall {
+  0% {
+    transform: rotate(-90deg);
+  }
+  100% {
+    transform: rotate(-45deg);
+  }
+}
+@keyframes shortfall {
+  0% {
+    transform: rotate(-90deg);
+  }
+  100% {
+    transform: rotate(-55deg);
+  }
+}
+@keyframes react {
+  0% {
+    margin-left: 0;
+  }
+  100% {
+    margin-left: 80px;
+    margin-right: -80px;
+  }
+}
+@keyframes react-sb {
+  0% {
+    margin-left: 0px;
+  }
+  100% {
+    margin-left: 80px;
+    margin-right: -80px;
+  }
+}
+@keyframes css {
+  0% {
+    margin-left: 0;
+  }
+  100% {
+    margin-left: 60px;
+    margin-right: -60px;
+  }
+}
+@keyframes sass {
+  0% {
+    margin-left: 0;
+  }
+  100% {
+    margin-left: 70px;
+    margin-right: -70px;
+  }
+}
+@keyframes node {
+  0% {
+    margin-left: 0;
+  }
+  100% {
+    margin-left: 65px;
+    margin-right: -65px;
+  }
+}
+@keyframes express {
+  0% {
+    margin-left: 0;
+  }
+  100% {
+    margin-left: 15px;
+    margin-right: -15px;
+  }
+}
+.tech {
+  padding: 0 6px;
+}
+.mc-tech {
+  position: absolute;
+  background-color: rgb(240, 227, 195);
+  color: #574230;
+  height: 30px;
+  width: 150px;
+  transform-origin: bottom left;
+  transform: rotate(-90deg);
+  left: -40px;
+  bottom: 0;
+}
+
+.aos-animate.mc-tech {
+  animation: fall 1.75s linear forwards;
+}
+.aos-animate.mc-tech.sb {
+  animation: shortfall 1.5s linear forwards;
 }
 .css-tech {
   background-color: rgb(101, 188, 205);
+}
+.aos-animate.css-tech {
+  animation: css 1s ease-out 0.6s forwards;
+}
+.aos-animate.css-tech.sb {
+  animation: css 0.9s ease-out 0.6s forwards;
 }
 .sass-tech {
   background-color: rgb(198, 99, 149);
   color: #cceaf0;
 }
+.aos-animate.sass-tech {
+  animation: sass 1s ease-out 1s forwards;
+}
+.react-tech {
+  background-color: rgb(97, 218, 251);
+}
+.aos-animate.react-tech {
+  animation: react 1.1s ease-out 0.9s forwards;
+}
+.aos-animate.react-tech.sb {
+  animation: react 1.1s ease-out 1.1s forwards;
+}
+.aos-animate.react-tech.fren {
+  animation: react 1.1s ease-out 0.65s forwards;
+}
 .node-tech {
   background-color: rgb(124, 184, 1);
 }
+.aos-animate.node-tech {
+  animation: node 0.8s ease-out 1.2s forwards;
+}
+.aos-animate.node-tech.sb {
+  animation: node 0.9s ease-out 0.9s forwards;
+}
 .express-tech {
   background-color: rgb(241, 215, 5);
+}
+.aos-animate.express-tech {
+  animation: express 1s ease-out 1.5s forwards;
+}
+.aos-animate.express-tech.sb {
+  animation: express 0.7s ease-out 1s forwards;
 }
 .psql-tech {
   background-color: rgb(50, 100, 141);
   color: #cceaf0;
 }
-.mc-tech {
-  background-color: rgb(240, 227, 195);
-  color: #574230;
-}
 
 .cy-tech {
   background-color: rgb(136, 136, 136);
   color: white;
+}
+
+.feature-links {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.links {
+  background-color: #7a9ca3;
+  border-radius: 3px;
+  margin: 0 auto;
+  padding: 12px;
+}
+
+.fab,
+.fas {
+  color: #cceaf0;
+  font-size: 30px;
+}
+
+.side-note {
+  font-style: italic;
+  font-size: 16px;
+  margin-top: 20px;
 }
 
 /* || Connect styles @320px*/
@@ -485,9 +609,7 @@ footer {
   .tech-stack {
     justify-content: center;
   }
-  .subheading {
-    text-align: center;
-  }
+
   .side-note {
     text-align: right;
   }
@@ -617,16 +739,10 @@ footer {
     font-size: 30px;
     padding: 20px 50px;
   }
-  .feature-img {
-    width: 440px;
-    height: 440px;
-  }
-  .long-img {
-    height: 680px;
-    width: 400px;
-  }
+
   .content {
-    margin-top: 50px;
+    /* display: flex;
+    justify-content: center; */
   }
   .tech-stack {
     flex-direction: column;
