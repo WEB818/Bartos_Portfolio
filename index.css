@@ -7,6 +7,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -27,8 +28,7 @@ a {
 }
 
 .container {
-  width: 99vw;
-  overflow-x: hidden;
+  width: 100vw;
 }
 
 .content-header {
@@ -149,7 +149,7 @@ nav {
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
-  width: 99vw;
+  width: 100vw;
 }
 
 .blur {
@@ -160,8 +160,8 @@ nav {
   position: absolute;
   -webkit-filter: blur(2px);
   width: 100vw;
-  height: 26vh;
-  top: 3vh;
+  height: 25vh;
+  top: 4vh;
 }
 
 .mask {
@@ -336,7 +336,7 @@ nav {
   right: 30%;
 }
 .swiper-container {
-  height: 450px;
+  height: 70vh;
 }
 .wehive-feature {
   background-color: #ffc40075;
@@ -362,16 +362,22 @@ nav {
 
 .swiper-slide,
 .phone-img,
-.tab-img,
-.lap-img {
+.tab-img {
   width: 260px;
   height: 350px;
+  margin: 20px auto;
 }
-
+.fren-tab {
+  margin: 100px auto;
+  height: 200px;
+}
+.lap-img {
+  width: 280px;
+  margin: 150px auto;
+}
 .subheading {
   text-decoration: underline;
   text-transform: uppercase;
-  text-align: center;
   margin: 30px 0px;
 }
 
@@ -491,7 +497,7 @@ nav {
   color: #cceaf0;
 }
 .aos-animate.sass-tech {
-  animation: sass 1s ease-out 1s forwards;
+  animation: sass 1s ease-out 0.85s forwards;
 }
 .react-tech {
   background-color: rgb(97, 218, 251);
@@ -535,14 +541,15 @@ nav {
 
 .feature-links {
   display: flex;
-  justify-content: space-evenly;
+  flex-direction: column;
 }
 
 .links {
   background-color: #7a9ca3;
   border-radius: 3px;
-  margin: 0 auto;
-  padding: 12px;
+  margin: 2px auto;
+  padding: 6px 0;
+  width: 200px;
 }
 
 .fab,
@@ -558,14 +565,16 @@ nav {
 }
 
 /* || Connect styles @320px*/
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  height: 50vh;
+}
+
 .contact {
   background-color: #7a9ca3;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  padding: 20px;
-  margin-bottom: 10px;
-  border-radius: 3px;
+  padding: 14px;
+  margin-bottom: 4px;
 }
 
 .handle {
@@ -603,8 +612,19 @@ footer {
   }
 
   /* || Portfolio content styles @768px*/
-  .second {
-    display: flex;
+  .swiper-container {
+    height: 80vh;
+  }
+
+  .phone-img,
+  .tab-img,
+  .lap-img {
+    width: fit-content;
+    height: fit-content;
+  }
+  .fren-tab {
+    height: 400px;
+    width: 400px;
   }
   .tech-stack {
     justify-content: center;
@@ -613,17 +633,16 @@ footer {
   .side-note {
     text-align: right;
   }
-
+  .feature-links {
+    width: 50vw;
+    margin: 0 auto;
+  }
   /* || Connect styles @768px*/
   .contact-container {
     width: 50vw;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
   }
 
-  .contact {
-    margin: 10px auto;
-  }
   .handle {
     font-size: 20px;
   }
@@ -638,27 +657,30 @@ footer {
   .nav-links {
     position: relative;
     display: flex;
-    justify-content: flex-start;
-    align-items: center;
     flex-direction: row;
-    width: 60%;
+    width: 50%;
     height: 8vh;
     top: 0vh;
-    margin-right: 10px;
     transform: translateX(0%);
     transition: none;
   }
 
   .nav-links a {
     color: #385257;
+    font-size: 12px;
+    margin: 0 auto;
   }
   .nav-links li {
     height: 8vh;
     opacity: 1;
-    width: 80%;
+    width: 100%;
   }
 
-  .menu-item:hover {
+  .menu-item {
+    padding: 10px;
+  }
+  .menu-item:hover,
+  .menu-item:active {
     color: #cceaf0;
   }
 
@@ -735,26 +757,43 @@ footer {
   .content-header {
     font-size: 60px;
   }
+
+  .project-title,
+  .swiper-container {
+    width: 70vw;
+    margin: 0 auto;
+  }
+  .content {
+    width: 80vw;
+  }
   .portfolio-subheader {
     font-size: 30px;
     padding: 20px 50px;
   }
+  .addl-info-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: space-between;
+  }
 
-  .content {
-    /* display: flex;
-    justify-content: center; */
-  }
-  .tech-stack {
+  .feature-links {
+    display: flex;
     flex-direction: column;
+    margin: 0 auto;
   }
+
   .langs,
+  .feature-links,
   .links {
-    width: 40vw;
-    margin-left: auto;
-    margin-right: auto;
+    width: 20vw;
+    margin: 0 auto;
   }
   .links {
-    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 2px;
   }
   .links:hover {
     background-color: #385257;
@@ -762,6 +801,14 @@ footer {
 }
 
 @media (min-width: 1440px) {
+  nav {
+    height: 6vh;
+  }
+  .nav-links {
+    width: 30%;
+    height: 6vh;
+  }
+
   /* || Header styles @1440px*/
   .background {
     background-size: contain;
@@ -885,27 +932,46 @@ footer {
   }
 
   /* || Portfolio content styles @1440px*/
-  .feature,
-  .bio-content {
-    width: 70vw;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .tech {
-    padding: 10px 50px;
-  }
-  .langs,
-  .links {
-    width: 30vw;
-    margin-left: auto;
-    margin-right: auto;
+  .addl-info-container {
+    justify-content: space-evenly;
   }
 
+  .project-title,
+  .swiper-container {
+    width: 80vw;
+    margin: 0 auto;
+  }
+  .bio-content {
+    width: 70vw;
+    margin: 0 auto;
+  }
+
+  .langs {
+    width: 20vw;
+    margin: 0 auto;
+  }
+
+  .phone-img,
+  .tab-img {
+    margin: 80px auto;
+  }
+  .fren-tab {
+    margin: 160px auto;
+    height: 400px;
+    width: 500px;
+  }
+  .lap-img {
+    margin: 180px auto;
+  }
   /* || Connect styles @1440px*/
+
   .contact-container {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
+    width: 90vw;
+    height: 30vh;
   }
   .contact {
     margin: 10px;
@@ -923,6 +989,9 @@ footer {
     width: 500px;
   }
 
+  .contact:hover .contact-icon {
+    color: #385257;
+  }
   #email:hover,
   #github:hover,
   #linkedin:hover {
@@ -935,7 +1004,7 @@ footer {
     content: "wendyebartos@gmail.com";
   }
 
-  #github:hover::after {
+  #github:hover::before {
     content: "WEB818";
   }
   #linkedin:hover::after {
@@ -950,6 +1019,7 @@ footer {
   .fas {
     font-size: 40px;
   }
+
   /* || Footer styles @1440px*/
   footer {
     margin-top: 100px;
