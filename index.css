@@ -63,6 +63,7 @@ nav {
   letter-spacing: 5px;
   font-size: 60px;
   font-family: "Zeyada", cursive;
+  transform: rotate(-2deg);
 }
 
 .burger {
@@ -141,29 +142,30 @@ nav {
 }
 
 .background {
-  background: url("images/hero.jpg");
-  background-position: center center;
+  background: url("images/wendy.png");
+  background-color: #7a9ca3;
+  background-position: left center;
   background-repeat: no-repeat;
-  background-size: cover;
-  height: 100vh;
+  background-size: contain;
+  height: 85vh;
   width: 100vw;
 }
 
 .blur {
   display: block;
-  background: url("images/hero.jpg");
+  background-color: #cceaf0;
   background-position: bottom;
   background-size: cover;
   position: absolute;
   -webkit-filter: blur(2px);
   width: 100vw;
   height: 25vh;
-  top: 4vh;
+  top: 2vh;
 }
 
 .mask {
   width: 100vw;
-  height: 26vh;
+  height: 27vh;
   position: absolute;
   top: 60vh;
   overflow: hidden;
@@ -171,6 +173,7 @@ nav {
 
 .titles > .sub-titles {
   background: #385257;
+
   width: 100vw;
   height: 26vh;
   top: 62vh;
@@ -202,58 +205,80 @@ nav {
 @keyframes flipcard {
   10% {
     content: "Designer";
+    letter-spacing: 1px;
   }
   20% {
     content: "Entrepreneur";
+    letter-spacing: 1px;
   }
   25% {
     content: "Writer";
+    letter-spacing: 1px;
   }
   30% {
     content: "Coach";
+    letter-spacing: 1px;
   }
   35% {
     content: "Ultrarunner";
+    letter-spacing: 1px;
   }
   40% {
     content: "Creator";
+    letter-spacing: 1px;
   }
   41% {
     content: "Learner";
+    letter-spacing: 1px;
   }
   42% {
     content: "Thinker";
+    letter-spacing: 1px;
   }
   43% {
     content: "Dreamer";
+    letter-spacing: 1px;
   }
   44% {
     content: "Doer";
+    letter-spacing: 1px;
   }
   45% {
     content: "Aerialist";
+    letter-spacing: 1px;
   }
   46% {
     content: "Improviser";
+    letter-spacing: 1px;
   }
   47% {
     content: "Traveler";
+    letter-spacing: 1px;
   }
   48% {
     content: "Volunteer";
+    letter-spacing: 1px;
   }
   49% {
     content: "Blogger";
+    letter-spacing: 1px;
   }
 
   50% {
     content: "web developer";
     font-size: 40px;
+    letter-spacing: 1px;
+  }
+
+  99% {
+    content: "wendy bartos";
+    letter-spacing: -2px;
   }
 
   100% {
-    content: "wendy bartos";
-    font-size: 60px;
+    content: "wendy e. bartos";
+    font-size: 50px;
+    letter-spacing: 3px;
   }
 }
 
@@ -584,16 +609,9 @@ footer {
   .nav-links {
     width: 50%;
   }
-
-  .blur {
-    -webkit-filter: blur(4px);
-    height: 36vh;
+  .background {
+    height: 100vh;
   }
-
-  .mask {
-    top: 63vh;
-  }
-
   .skill-title {
     padding: 0 40px;
   }
@@ -669,69 +687,79 @@ footer {
     color: #cceaf0;
   }
 
-  .blur {
-    -webkit-filter: blur(4px);
-    height: 44vh;
-  }
-
-  .mask {
-    top: 63vh;
-  }
-
   @keyframes flipcard {
     10% {
       content: "Designer";
+      letter-spacing: 1px;
     }
     20% {
       content: "Entrepreneur";
+      letter-spacing: 1px;
     }
     25% {
       content: "Writer";
+      letter-spacing: 1px;
     }
     30% {
       content: "Coach";
+      letter-spacing: 1px;
     }
     35% {
       content: "Ultrarunner";
+      letter-spacing: 1px;
     }
     40% {
       content: "Creator";
+      letter-spacing: 1px;
     }
     41% {
       content: "Learner";
+      letter-spacing: 1px;
     }
     42% {
       content: "Thinker";
+      letter-spacing: 1px;
     }
     43% {
       content: "Dreamer";
+      letter-spacing: 1px;
     }
     44% {
       content: "Doer";
+      letter-spacing: 1px;
     }
     45% {
       content: "Aerialist";
+      letter-spacing: 1px;
     }
     46% {
       content: "Improviser";
+      letter-spacing: 1px;
     }
     47% {
       content: "Traveler";
+      letter-spacing: 1px;
     }
     48% {
       content: "Volunteer";
+      letter-spacing: 1px;
     }
     49% {
       content: "Blogger";
+      letter-spacing: 1px;
     }
 
     50% {
       content: "web developer";
       font-size: 40px;
+      letter-spacing: 1px;
     }
-
-    100% {
+    99% {
       content: "wendy bartos";
+      letter-spacing: -2px;
+    }
+    100% {
+      content: "wendy e. bartos";
       font-size: 60px;
       margin-left: 280px;
     }
@@ -806,65 +834,6 @@ footer {
   }
   .header-container {
     background-color: #7a9ca3;
-  }
-
-  @keyframes flipcard {
-    10% {
-      content: "Designer";
-    }
-    20% {
-      content: "Entrepreneur";
-    }
-    25% {
-      content: "Writer";
-    }
-    30% {
-      content: "Coach";
-    }
-    35% {
-      content: "Ultrarunner";
-    }
-    40% {
-      content: "Creator";
-    }
-    41% {
-      content: "Learner";
-    }
-    42% {
-      content: "Thinker";
-    }
-    43% {
-      content: "Dreamer";
-    }
-    44% {
-      content: "Doer";
-    }
-    45% {
-      content: "Aerialist";
-    }
-    46% {
-      content: "Improviser";
-    }
-    47% {
-      content: "Traveler";
-    }
-    48% {
-      content: "Volunteer";
-    }
-    49% {
-      content: "Blogger";
-    }
-
-    50% {
-      content: "web developer";
-      font-size: 40px;
-    }
-
-    100% {
-      content: "wendy bartos";
-      font-size: 75px;
-      margin-left: 280px;
-    }
   }
 
   .skills-container {
