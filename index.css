@@ -140,10 +140,7 @@ nav {
 .bar .line3 {
   transform: rotate(45deg) translate(-5px, -6px);
 }
-.social {
-  display: none;
-  position: absolute;
-}
+
 .background {
   background: url("images/wendy.png");
   background-color: #7a9ca3;
@@ -688,12 +685,7 @@ footer {
   .menu-item:active {
     color: #cceaf0;
   }
-  .social {
-    display: block;
-    width: 1200px;
-    height: 800px;
-    z-index: -100;
-  }
+
   @keyframes flipcard {
     10% {
       content: "Designer";
