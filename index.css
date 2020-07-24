@@ -147,7 +147,7 @@ nav {
   background-position: left center;
   background-repeat: no-repeat;
   background-size: contain;
-  height: 85vh;
+  height: 92vh;
   width: 100vw;
 }
 
@@ -609,9 +609,7 @@ footer {
   .nav-links {
     width: 50%;
   }
-  .background {
-    height: 100vh;
-  }
+
   .skill-title {
     padding: 0 40px;
   }
@@ -819,9 +817,8 @@ footer {
     width: 30%;
     height: 6vh;
   }
-
   .background {
-    background-size: contain;
+    height: 94vh;
   }
   .blur {
     background-size: contain;
