@@ -148,7 +148,6 @@ nav {
   background-repeat: no-repeat;
   background-size: contain;
   height: 92vh;
-  width: 100vw;
 }
 
 .blur {
@@ -173,7 +172,6 @@ nav {
 
 .titles > .sub-titles {
   background: #385257;
-
   width: 100vw;
   height: 26vh;
   top: 62vh;
@@ -357,7 +355,9 @@ nav {
 }
 .swiper-container {
   height: 70vh;
+  max-height: 800px;
 }
+
 .wehive-feature {
   background-color: #ffc40075;
 }
@@ -378,22 +378,32 @@ nav {
 }
 .swiper-wrapper {
   align-items: center;
+  width: 100px;
 }
 
-.swiper-slide,
-.phone-img,
-.tab-img {
-  width: 260px;
-  height: 350px;
-  margin: 20px auto;
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  display: none;
 }
+.img-container {
+  display: flex;
+  align-items: center;
+  height: 62vh;
+  max-height: 750px;
+}
+.phone-img,
+.tab-img,
+.lap-img {
+  width: 240px;
+  margin: 0 auto;
+}
+
 .fren-tab {
   margin: 100px auto;
   height: 200px;
 }
-.lap-img {
-  width: 280px;
-  margin: 150px auto;
+.swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background-color: #385257;
 }
 .subheading {
   text-decoration: underline;
@@ -618,7 +628,9 @@ footer {
   .swiper-container {
     height: 80vh;
   }
-
+  .img-container {
+    height: 70vh;
+  }
   .phone-img,
   .tab-img,
   .lap-img {
@@ -626,8 +638,8 @@ footer {
     height: fit-content;
   }
   .fren-tab {
-    height: 400px;
-    width: 400px;
+    height: 450px;
+    width: 600px;
   }
   .tech-stack {
     justify-content: center;
@@ -773,6 +785,11 @@ footer {
     width: 70vw;
     margin: 0 auto;
   }
+  .swiper-button-next::after,
+  .swiper-button-prev::after {
+    display: block;
+    color: #385257;
+  }
   .content {
     width: 80vw;
   }
@@ -885,7 +902,7 @@ footer {
 
   .project-title,
   .swiper-container {
-    width: 80vw;
+    width: 65vw;
     margin: 0 auto;
   }
   .bio-content {
@@ -898,17 +915,13 @@ footer {
     margin: 0 auto;
   }
 
-  .phone-img,
-  .tab-img {
-    margin: 80px auto;
+  .lap-img {
+    width: 800px;
+    height: 400px;
   }
   .fren-tab {
-    margin: 160px auto;
-    height: 400px;
-    width: 500px;
-  }
-  .lap-img {
-    margin: 180px auto;
+    width: 800px;
+    height: 600px;
   }
 
   .contact-container {
@@ -969,5 +982,10 @@ footer {
   footer {
     margin-top: 100px;
     font-size: 32px;
+  }
+}
+@media (min-width: 2560px) {
+  .swiper-container {
+    width: 50vw;
   }
 }

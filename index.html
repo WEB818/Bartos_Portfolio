@@ -195,11 +195,13 @@
                 <div class="divider wehive"></div>
               </div>
               <h4 class="project-title">Create accountability</h4>
-              <img
-                src="images/phonewh.png"
-                alt="wehive hivemind view"
-                class="phone-img"
-              />
+              <div class="img-container">
+                <img
+                  src="images/phonewh.png"
+                  alt="wehive hivemind view"
+                  class="phone-img"
+                />
+              </div>
             </div>
 
             <div class="swiper-slide">
@@ -207,11 +209,13 @@
                 <div class="divider wehive"></div>
               </div>
               <h4 class="project-title">Together</h4>
-              <img
-                src="images/tabletwh.png"
-                alt="wehive member view"
-                class="tab-img"
-              />
+              <div class="img-container">
+                <img
+                  src="images/tabletwh.png"
+                  alt="wehive member view"
+                  class="tab-img"
+                />
+              </div>
             </div>
 
             <div class="swiper-slide">
@@ -219,15 +223,20 @@
                 <div class="divider wehive"></div>
               </div>
               <h4 class="project-title">We Achieve</h4>
-              <img
-                src="images/laptopwh.png"
-                alt="wehive member view"
-                class="lap-img"
-              />
+              <div class="img-container">
+                <img
+                  src="images/laptopwh.png"
+                  alt="wehive member view"
+                  class="lap-img"
+                />
+              </div>
             </div>
           </div>
           <!-- Add Pagination -->
           <div class="swiper-pagination"></div>
+          <!-- Add Arrows -->
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
         </div>
 
         <div class="addl-info-container">
@@ -294,7 +303,13 @@
                 <div class="divider spacedbox"></div>
               </div>
               <h4 class="project-title">Teach others</h4>
-              <img src="images/phonesb.png" alt="word view" class="phone-img" />
+              <div class="img-container">
+                <img
+                  src="images/phonesb.png"
+                  alt="word view"
+                  class="phone-img"
+                />
+              </div>
             </div>
 
             <div class="swiper-slide">
@@ -302,27 +317,33 @@
                 <div class="divider spacedbox"></div>
               </div>
               <h4 class="project-title">Effectively</h4>
-              <img
-                src="images/tabletsb.png"
-                alt="guess response view"
-                class="tab-img"
-              />
+              <div class="img-container">
+                <img
+                  src="images/tabletsb.png"
+                  alt="guess response view"
+                  class="tab-img"
+                />
+              </div>
             </div>
             <div class="swiper-slide">
               <div class="divider-parent">
                 <div class="divider spacedbox"></div>
               </div>
               <h4 class="project-title">Using Tech</h4>
-
-              <img
-                src="images/laptopsb.png"
-                alt="word list view"
-                class="lap-img"
-              />
+              <div class="img-container">
+                <img
+                  src="images/laptopsb.png"
+                  alt="word list view"
+                  class="lap-img"
+                />
+              </div>
             </div>
           </div>
           <!-- Add Pagination -->
           <div class="swiper-pagination"></div>
+          <!-- Add Arrows -->
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
         </div>
         <div class="addl-info-container">
           <div class="tech-stack">
@@ -402,11 +423,13 @@
                 <div class="divider frenmo"></div>
               </div>
               <h4 class="project-title">Do Good Things</h4>
-              <img
-                src="images/phonefrenmo.png"
-                alt="Frenmo by category view"
-                class="phone-img"
-              />
+              <div class="img-container">
+                <img
+                  src="images/phonefrenmo.png"
+                  alt="Frenmo by category view"
+                  class="phone-img"
+                />
+              </div>
             </div>
 
             <div class="swiper-slide">
@@ -414,27 +437,33 @@
                 <div class="divider frenmo"></div>
               </div>
               <h4 class="project-title">Swap Favors</h4>
-              <img
-                src="images/tabletfrenmo.png"
-                alt="Frenmo Friends Feed view"
-                class="tab-img fren-tab"
-              />
+              <div class="img-container">
+                <img
+                  src="images/tabletfrenmo.png"
+                  alt="Frenmo Friends Feed view"
+                  class="tab-img fren-tab"
+                />
+              </div>
             </div>
             <div class="swiper-slide">
               <div class="divider-parent">
                 <div class="divider frenmo"></div>
               </div>
               <h4 class="project-title">Build Community</h4>
-
-              <img
-                src="images/laptopfrenmo.png"
-                alt="Homepage"
-                class="lap-img"
-              />
+              <div class="img-container">
+                <img
+                  src="images/laptopfrenmo.png"
+                  alt="Homepage"
+                  class="lap-img"
+                />
+              </div>
             </div>
           </div>
           <!-- Add Pagination -->
           <div class="swiper-pagination"></div>
+          <!-- Add Arrows -->
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
         </div>
         <div class="addl-info-container">
           <div class="tech-stack">
@@ -543,6 +572,10 @@
         pagination: {
           el: ".swiper-pagination",
           clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
         },
       });
     </script>
