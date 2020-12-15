@@ -142,7 +142,7 @@ nav {
 }
 
 .background {
-  background: url("images/wendy.png");
+  background: url("assets/wendy.png");
   background-color: #7a9ca3;
   background-position: left center;
   background-repeat: no-repeat;
@@ -376,6 +376,18 @@ nav {
 .frenmo {
   background-color: #a8ffdc;
 }
+.roulets-feature {
+  background-color: #f1a8c7;
+}
+.roulets {
+  background-color: #ea4b8b;
+}
+.sciscito-feature {
+  background-color: #dfbcfc;
+}
+.sciscito {
+  background-color: #a332ff;
+}
 .swiper-wrapper {
   align-items: center;
   width: 100px;
@@ -398,7 +410,7 @@ nav {
   margin: 0 auto;
 }
 
-.fren-tab {
+.landscape-tab {
   margin: 100px auto;
   height: 200px;
 }
@@ -422,18 +434,18 @@ nav {
 }
 
 @keyframes fall {
-  0% {
+  from {
     transform: rotate(-90deg);
   }
-  100% {
+  to {
     transform: rotate(-45deg);
   }
 }
 @keyframes shortfall {
-  0% {
+  from {
     transform: rotate(-90deg);
   }
-  100% {
+  to {
     transform: rotate(-55deg);
   }
 }
@@ -491,6 +503,7 @@ nav {
     margin-right: -15px;
   }
 }
+
 .tech {
   padding: 0 6px;
 }
@@ -528,7 +541,8 @@ nav {
 .aos-animate.sass-tech {
   animation: sass 1s ease-out 0.85s forwards;
 }
-.react-tech {
+.react-tech,
+.reactjs-tech {
   background-color: rgb(97, 218, 251);
 }
 .aos-animate.react-tech {
@@ -567,7 +581,55 @@ nav {
   background-color: rgb(136, 136, 136);
   color: white;
 }
-
+@keyframes styled {
+  to {
+    opacity: 1;
+  }
+}
+@keyframes reactfade {
+  to {
+    opacity: 1;
+  }
+}
+@keyframes svg {
+  to {
+    opacity: 1;
+  }
+}
+.sc-tech {
+  background-color: rgb(214, 108, 142);
+  color: white;
+  opacity: 0;
+  margin: 0 100px 0 20px;
+}
+.scss-tech {
+  background-color: rgb(214, 108, 142);
+  color: white;
+  opacity: 0;
+  margin: 0 60px 0 110px;
+}
+.reactjs-tech {
+  opacity: 0;
+  margin-left: 100px;
+}
+.aos-animate.sc-tech {
+  animation: styled 1s ease-out 1.5s forwards;
+}
+.aos-animate.scss-tech {
+  animation: styled 1s ease-out 1.5s forwards;
+}
+.aos-animate.reactjs-tech {
+  animation: reactfade 0.5s ease-out 0.5s forwards;
+}
+.aos-animate.svg-tech {
+  animation: svg ease-out 0s forwards;
+}
+.svg-tech {
+  background-color: rgb(255, 176, 58);
+  color: black;
+  opacity: 0;
+  margin: 0 40px 0 80px;
+}
 .feature-links {
   display: flex;
   flex-direction: column;
@@ -592,7 +654,9 @@ nav {
   font-size: 16px;
   margin-top: 20px;
 }
-
+.italics {
+  font-style: italic;
+}
 .contact-container {
   display: flex;
   flex-direction: column;
@@ -631,13 +695,15 @@ footer {
   .img-container {
     height: 70vh;
   }
-  .phone-img,
+  .phone-img {
+    height: 90%;
+  }
   .tab-img,
   .lap-img {
     width: fit-content;
     height: fit-content;
   }
-  .fren-tab {
+  .landscape-tab {
     height: 450px;
     width: 600px;
   }
@@ -797,6 +863,10 @@ footer {
     font-size: 30px;
     padding: 20px 50px;
   }
+
+  .phone-img {
+    width: 360px;
+  }
   .addl-info-container {
     display: flex;
     flex-direction: row;
@@ -826,7 +896,13 @@ footer {
     background-color: #385257;
   }
 }
-
+.reactjs-tech {
+  margin-left: 40px;
+}
+.sc-tech {
+  /* margin-left: -20px;
+  margin-right: 20px; */
+}
 @media (min-width: 1440px) {
   nav {
     height: 6vh;
@@ -919,7 +995,7 @@ footer {
     width: 800px;
     height: 400px;
   }
-  .fren-tab {
+  .landscape-tab {
     width: 800px;
     height: 600px;
   }
