@@ -242,10 +242,7 @@ nav {
     content: "Doer";
     letter-spacing: 1px;
   }
-  45% {
-    content: "Aerialist";
-    letter-spacing: 1px;
-  }
+
   46% {
     content: "Improviser";
     letter-spacing: 1px;
@@ -644,7 +641,8 @@ nav {
 }
 
 .fab,
-.fas {
+.fas,
+.far {
   color: #cceaf0;
   font-size: 30px;
 }
@@ -660,26 +658,174 @@ nav {
 .contact-container {
   display: flex;
   flex-direction: column;
-  height: 50vh;
 }
 
 .contact {
-  background-color: #7a9ca3;
-  padding: 14px;
-  margin-bottom: 4px;
+  display: flex;
+  padding: 24px;
+  justify-content: center;
+}
+
+.contact-handle {
+  display: flex;
+  width: 90%;
+  justify-content: space-around;
+}
+
+.contact:nth-child(odd) {
+  width: 90%;
+  align-self: flex-start;
+}
+.contact:nth-child(even) {
+  width: 90%;
+  align-self: flex-end;
 }
 
 .handle {
   font-size: 14px;
+  color: #7a9ca3;
+  display: flex;
+}
+.contact-icon {
+  color: #7a9ca3;
+  cursor: url("https://proportfolio.s3-us-west-1.amazonaws.com/LetsConnect_50x50.png"),
+    auto;
 }
 
+.message-header {
+  background-color: #385257;
+  color: #cceaf0;
+  padding: 10px 0;
+  font-family: "Bebas Neue", cursive;
+  letter-spacing: 10px;
+}
+.form-container {
+  margin-top: 40px;
+  border: solid 2px #385257;
+}
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.input-container {
+  display: flex;
+  flex-direction: column;
+}
+.message-container {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+}
+.inputs {
+  padding: 10px;
+  margin: 5px 0;
+  border: none;
+  border-bottom: 1px solid #385257;
+  font-family: "Montserrat", sans-serif;
+}
+
+.inputs:focus {
+  outline: 3px solid #cceaf0;
+  font-size: 16px;
+}
+.inputs::placeholder {
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  line-height: 1.6;
+  text-align: center;
+  color: #385257;
+}
+
+.text-message {
+  font-family: "Montserrat", sans-serif;
+  height: 150px;
+  padding: 10px;
+  margin: 5px 0;
+  border: none;
+  border-bottom: 1px solid #385257;
+}
+.text-message:focus {
+  outline: 3px solid #cceaf0;
+  font-size: 16px;
+  line-height: 1.6;
+  text-align: left;
+  color: #385257;
+}
+.send-btn {
+  padding: 10px;
+  margin: 10px;
+  background-color: #385257;
+  color: #cceaf0;
+  align-items: flex-end;
+  cursor: url("https://proportfolio.s3-us-west-1.amazonaws.com/LetsConnect_50x50.png"),
+    auto;
+}
+.send-btn:focus {
+  outline: 3px solid #cceaf0;
+  background-color: #cceaf0;
+  color: #385257;
+}
+.submitted {
+  display: none;
+}
+.reply-container {
+  display: none;
+}
+.reply {
+  display: flex;
+  flex-direction: column;
+}
+
+.thank-you-msg {
+  display: flex;
+  background-color: white;
+  color: #7a9ca3;
+  border: solid 2px #385257;
+  justify-content: center;
+  margin: 30px 0;
+}
+
+.thanks-title {
+  font-family: "Bebas Neue", cursive;
+  letter-spacing: 1px;
+  background-color: #385257;
+  color: #cceaf0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+}
+.ty-header {
+  transform: rotate(-90deg);
+  width: 200px;
+}
+.signature {
+  margin: 10px;
+  font-family: "Zeyada", cursive;
+  font-size: 22px;
+  color: #7a9ca3;
+}
+.close-sig {
+  position: relative;
+}
+.close-msg {
+  position: absolute;
+  right: 0;
+  top: 0;
+  cursor: pointer;
+}
 footer {
   background: #7a9ca3;
   color: #385257;
   font-family: "Zeyada", cursive;
   font-size: 22px;
 }
-
+.c {
+  color: #cceaf0;
+  vertical-align: middle;
+  font-size: 20px;
+}
 @media (min-width: 768px) {
   .nav-links {
     width: 50%;
@@ -719,13 +865,15 @@ footer {
     margin: 0 auto;
   }
 
-  .contact-container {
+  .contact-wrapper {
     width: 50vw;
     margin: 0 auto;
   }
-
-  .handle {
-    font-size: 20px;
+  .contact {
+    border-bottom: 1px dotted #385257;
+  }
+  .divider-container {
+    background-color: transparent;
   }
 }
 
@@ -805,10 +953,7 @@ footer {
       content: "Doer";
       letter-spacing: 1px;
     }
-    45% {
-      content: "Aerialist";
-      letter-spacing: 1px;
-    }
+
     46% {
       content: "Improviser";
       letter-spacing: 1px;
@@ -857,7 +1002,7 @@ footer {
     color: #385257;
   }
   .content {
-    width: 80vw;
+    width: 1000px;
   }
   .portfolio-subheader {
     font-size: 30px;
@@ -899,10 +1044,7 @@ footer {
 .reactjs-tech {
   margin-left: 40px;
 }
-.sc-tech {
-  /* margin-left: -20px;
-  margin-right: 20px; */
-}
+
 @media (min-width: 1440px) {
   nav {
     height: 6vh;
@@ -999,62 +1141,76 @@ footer {
     width: 800px;
     height: 600px;
   }
-
-  .contact-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    width: 90vw;
-    height: 30vh;
-  }
-  .contact {
-    margin: 10px;
-    width: 30vw;
-    padding: 60px;
-  }
-
-  #email,
-  #github,
-  #linkedin {
+  .contact-wrapper {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    height: 200px;
-    width: 500px;
+    align-items: center;
+  }
+  .contact-container {
+    flex-direction: row;
+  }
+  .contact {
+    border: none;
+    padding: 30px;
+    position: relative;
   }
 
-  .contact:hover .contact-icon {
-    color: #385257;
+  .contact-handle {
+    flex-direction: column;
   }
-  #email:hover,
-  #github:hover,
-  #linkedin:hover {
-    background-color: #cceaf0;
+
+  .form-container {
+    width: 70%;
+  }
+
+  .contact:hover .handle {
+    display: block;
     font-family: "Zeyada", cursive;
-    font-size: 30px;
+    font-size: 20px;
+    cursor: url("https://proportfolio.s3-us-west-1.amazonaws.com/LetsConnect_50x50.png"),
+      auto;
+    position: absolute;
+    background: #cceaf0;
+    border-radius: 5px;
+    padding: 5px 15px;
   }
 
-  #email:hover::after {
-    content: "wendyebartos@gmail.com";
+  .contact:nth-child(odd):hover .handle {
+    margin: -60px 30px 30px 30px;
   }
-
-  #github:hover::before {
-    content: "WEB818";
+  .contact:nth-child(even):hover .handle {
+    margin: 30px -120px -60px 30px;
   }
-  #linkedin:hover::after {
-    content: "wendybartos";
-  }
-
   .handle {
     display: none;
   }
-
-  .fab,
-  .fas {
-    font-size: 40px;
+  .input-container {
+    width: 90%;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .message-container {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+  }
+  .inputs-message {
+    display: none;
   }
 
+  .thank-you-msg {
+    width: 40%;
+    height: 50%;
+  }
+
+  .fab,
+  .fas,
+  .far {
+    font-size: 40px;
+  }
+  .c {
+    font-size: 22px;
+  }
   footer {
     margin-top: 100px;
     font-size: 32px;

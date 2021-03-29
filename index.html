@@ -711,7 +711,7 @@
  <div class="content">
   <span class="italics">sciscito: (Latin) to inquire, seek to know, investigate, search, question repeatedly, or question earnestly</span>
   <br/><br/>
-  I developed this web app using the Harry Potter REST API (currently down for maintenance) because life at Hogwarts would be so much easier if wizards had Google. Navigate the user interface with a magic wand and use the enchanted quill to search the Harry Potter API for your magical needs.
+  I developed this web app using the Harry Potter REST API (currently down for maintenance) because life at Hogwarts would be so much easier if witches and wizards had Google. Navigate the user interface with a magic wand and use the enchanted quill to search the Harry Potter API for your magical needs.
  </div>
 
 </section>
@@ -720,8 +720,8 @@
         <div id="connect">
           <h2 class="content-header">Where To Find Me</h2>
         </div>
-        <div class="contact-container">
-          <div class="contact" id="email">
+        <!-- <div class="contact-container"> -->
+          <!-- <div class="contact" id="email">
             <a target="_blank" href="mailto:wendyebartos@gmail.com">
               <i class="fas fa-envelope contact-icon"></i>
               <div class="handle">wendyebartos@gmail.com</div>
@@ -741,11 +741,93 @@
               <div class="handle">wendybartos</div>
             </a>
           </div>
+
+          <div class="contact" id="twitter">
+            <a target="_blank" href="https://twitter.com/WEB8181">
+              <i class="fab fa-twitter contact-icon"></i>
+              <div class="handle">WEB8181</div>
+            </a>
+          </div>
+
+          <div class="contact" id="calendly">
+            <a target="_blank" href="https://calendly.com/wendy-bartos">
+              <i class="far fa-calendar-alt contact-icon"></i>
+              <div class="handle">wendy-bartos</div>
+            </a>
+          </div> -->
+        <!-- </div> -->
+<div class="contact-wrapper">
+    <div class="contact-container">
+
+      <div class="contact" id="github">
+        <a target="_blank" href="https://github.com/WEB818" class="contact-handle">
+          <div class="handle">WEB818</div>
+            <i class="fab fa-github contact-icon" class="handle"></i>
+          </a>
         </div>
+
+        <div class="contact" id="linkedin">
+          <a target="_blank" href="https://www.linkedin.com/in/wendybartos/" class="contact-handle">
+            <i class="fab fa-linkedin contact-icon"></i>
+            <div class="handle">wendybartos</div>
+          </a>
+        </div>
+
+        <div class="contact" id="twitter">
+          <a target="_blank" href="https://twitter.com/WEB8181" class="contact-handle">
+            <div class="handle">WEB8181</div>
+            <i class="fab fa-twitter contact-icon"></i>
+          </a>
+        </div>
+
+        <div class="contact" id="calendly">
+          <a target="_blank" href="https://calendly.com/wendy-bartos" class="contact-handle">
+            <i class="far fa-calendar-alt contact-icon"></i>
+            <div class="handle">Schedule Meeting</div>
+          </a>
+        </div>
+                 
+      </div>
+      <div class="form-container">
+          <h4 class="message-header">Contact Me</h4>
+          <form id="contact-form" class="contact-form">
+            <div class="input-container">
+            <input type="text" class="inputs" id="name" name="name" 
+            placeholder="Name"
+            aria-label="message sender's name" required />
+            <input type="email" class="inputs" id="email" name="email" 
+            placeholder="Email"
+            aria-label="message sender's email" required />
+          </div>
+          <div class="message-container">
+            <label for="text-message" class="inputs-message">Message</label>
+            <textarea class="text-message" id="text-message" name="content"
+            aria-label="message to Wendy"></textarea>
+          </div>
+            <button type="submit" class="send-btn">Send</button>
+          </form>
+        </div>
+        <div class="reply-container">
+          <div class="thanks-title">
+            <h3 class="ty-header">Thank You</h3>
+          </div>
+         
+         <div class="reply">Your message was sent. I will respond as soon as possible.
+         <div class="signature">
+           
+          <div>Thanks again,</div>
+          <div class="close-sig">
+          <div>Wendy</div>
+          <i class="fas fa-times close-msg"></i></div>
+         </div>
+      </div> 
+      </div>
+
+</div>
       </section>
     </main>
     <footer>
-      Wendy E. Bartos | Software Engineer
+      <i class="far fa-copyright c"></i> 2021 Wendy E. Bartos | Software Engineer
     </footer>
     <script
       src="https://code.jquery.com/jquery-3.4.1.js"
@@ -756,7 +838,8 @@
       src="https://kit.fontawesome.com/184f968435.js"
       crossorigin="anonymous"
     ></script>
-    <script src="index.js"></script>
+    <script src="index.js" type="module"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script>
       var swiper = new Swiper(".swiper-container", {
@@ -776,6 +859,8 @@
       });
     </script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    
+    
     <script>
       AOS.init();
     </script>
