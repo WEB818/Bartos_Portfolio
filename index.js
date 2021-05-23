@@ -113,10 +113,7 @@ const mobileHovers = () => {
 
   hex.addEventListener('touchmove', function (event) {
     event.preventDefault();
-    event.target.classList.toggle('clear-hex');
-    setTimeout(function () {
-      event.target.classList.toggle('clear-hex');
-    }, 2000);
+    event.target.classList.toggle('mobile-clear');
   });
 };
 
