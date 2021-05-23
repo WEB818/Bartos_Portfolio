@@ -108,15 +108,6 @@ const hexHovers = () => {
   });
 };
 
-const mobileHovers = () => {
-  let hex = document.getElementById('hex');
-
-  hex.addEventListener('touchstart touchend', function (event) {
-    event.preventDefault();
-    event.target.classList.toggle('mobile-clear');
-  });
-};
-
 const main = function () {
   navSlide();
   hideMenu();
@@ -124,7 +115,6 @@ const main = function () {
   closeMsg();
   castShadow();
   hexHovers();
-  mobileHovers();
 };
 
 $(main);
