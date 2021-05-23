@@ -163,7 +163,10 @@ nav {
   transform: translateX(0%);
   z-index: 30;
 }
-
+#hex {
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+}
 path:nth-child(odd) {
   fill: #ffd30e;
 }
