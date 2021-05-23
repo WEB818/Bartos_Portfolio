@@ -10,7 +10,7 @@ html {
 }
 
 body {
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 18px;
   line-height: 1.6;
   text-align: center;
@@ -31,7 +31,7 @@ a {
 }
 
 .content-header {
-  font-family: "Bebas Neue", cursive;
+  font-family: 'Bebas Neue';
   font-size: 36px;
   color: #385257;
   text-decoration: underline #cceaf0;
@@ -53,17 +53,61 @@ nav {
   padding: 0px 20px;
   background-color: #7a9ca3;
   position: fixed;
+  top: 0;
   z-index: 10;
 }
 
 .name {
-  padding-top: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Inconsolata', monospace;
+  font-size: 30px;
+  text-transform: uppercase;
+  letter-spacing: 10px;
+}
+
+.web {
+  display: flex;
+  flex-direction: row;
+}
+
+.name::before {
+  margin-top: 20px;
+  content: url('./assets/open.svg');
+}
+
+.name::after {
+  content: url('./assets/close.svg');
+}
+
+.web > div:hover {
   color: #385257;
-  text-decoration: none;
-  letter-spacing: 5px;
-  font-size: 60px;
-  font-family: "Zeyada", cursive;
-  transform: rotate(-2deg);
+}
+
+#w,
+#e,
+#b {
+  color: transparent;
+  font-size: 40px;
+  text-shadow: grey 5px 5px 2px;
+  transform: skew(-50deg, -10deg) rotateX(350deg) rotateY(20deg) rotateZ(10deg);
+  transform-origin: bottom right 180px;
+  position: absolute;
+  z-index: -10;
+}
+
+#w {
+  left: 80px;
+}
+
+#e {
+  left: 120px;
+}
+
+#b {
+  left: 160px;
 }
 
 .burger {
@@ -98,7 +142,7 @@ nav {
 }
 
 .nav-links a {
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   color: #cceaf0;
   text-decoration: none;
   font-weight: bold;
@@ -118,6 +162,50 @@ nav {
 .nav-active {
   transform: translateX(0%);
   z-index: 30;
+}
+
+path:nth-child(odd) {
+  fill: #ffd30e;
+}
+
+.clear-hex {
+  animation: hex-clear 10s linear forwards;
+}
+
+@keyframes hex-clear {
+  from {
+    fill: white;
+    opacity: 0;
+  }
+  to {
+    fill: #ffd30e;
+    opacity: 1;
+  }
+}
+
+.titles {
+  position: absolute;
+  top: 25%;
+  left: 25%;
+  z-index: -10;
+}
+.title::before {
+  content: '';
+  animation: flipcard 10s infinite;
+  font-family: 'Inconsolata', monospace;
+  font-size: 200px;
+  text-transform: uppercase;
+  color: #385257;
+  letter-spacing: 40px;
+}
+
+@keyframes flipcard {
+  10% {
+    content: 'Designer';
+  }
+  100% {
+    content: 'Developer';
+  }
 }
 
 @keyframes navLinkFade {
@@ -141,148 +229,11 @@ nav {
   transform: rotate(45deg) translate(-5px, -6px);
 }
 
-.background {
-  background: url("assets/wendy.png");
-  background-color: #7a9ca3;
-  background-position: left center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  height: 92vh;
-}
-
-.blur {
-  display: block;
-  background-color: #cceaf0;
-  background-position: bottom;
-  background-size: cover;
-  position: absolute;
-  -webkit-filter: blur(2px);
-  width: 100vw;
-  height: 25vh;
-  top: 2vh;
-}
-
-.mask {
-  width: 100vw;
-  height: 27vh;
-  position: absolute;
-  top: 60vh;
-  overflow: hidden;
-}
-
-.titles > .sub-titles {
-  background: #385257;
-  width: 100vw;
-  height: 26vh;
-  top: 62vh;
-  animation: blankout 10s ease forwards;
-}
-
-@keyframes blankout {
-  0% {
-    opacity: 0.4;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-.title {
-  color: #cceaf0;
-  font-size: 14px;
-  position: relative;
-  top: 40px;
-  z-index: 10;
-}
-
-.title::before {
-  content: "";
-  animation: flipcard 10s forwards;
-  font-family: "Zeyada", cursive;
-}
-
-@keyframes flipcard {
-  10% {
-    content: "Designer";
-    letter-spacing: 1px;
-  }
-  20% {
-    content: "Entrepreneur";
-    letter-spacing: 1px;
-  }
-  25% {
-    content: "Writer";
-    letter-spacing: 1px;
-  }
-  30% {
-    content: "Coach";
-    letter-spacing: 1px;
-  }
-  35% {
-    content: "Ultrarunner";
-    letter-spacing: 1px;
-  }
-  40% {
-    content: "Creator";
-    letter-spacing: 1px;
-  }
-  41% {
-    content: "Learner";
-    letter-spacing: 1px;
-  }
-  42% {
-    content: "Thinker";
-    letter-spacing: 1px;
-  }
-  43% {
-    content: "Dreamer";
-    letter-spacing: 1px;
-  }
-  44% {
-    content: "Doer";
-    letter-spacing: 1px;
-  }
-
-  46% {
-    content: "Improviser";
-    letter-spacing: 1px;
-  }
-  47% {
-    content: "Traveler";
-    letter-spacing: 1px;
-  }
-  48% {
-    content: "Volunteer";
-    letter-spacing: 1px;
-  }
-  49% {
-    content: "Blogger";
-    letter-spacing: 1px;
-  }
-
-  50% {
-    content: "web developer";
-    font-size: 40px;
-    letter-spacing: 1px;
-  }
-
-  99% {
-    content: "wendy bartos";
-    letter-spacing: -2px;
-  }
-
-  100% {
-    content: "wendy e. bartos";
-    font-size: 50px;
-    letter-spacing: 3px;
-  }
-}
-
 .skill {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   color: #385257;
   padding: 15px 0;
 }
@@ -688,7 +639,7 @@ nav {
 }
 .contact-icon {
   color: #7a9ca3;
-  cursor: url("https://proportfolio.s3-us-west-1.amazonaws.com/LetsConnect_50x50.png"),
+  cursor: url('https://proportfolio.s3-us-west-1.amazonaws.com/LetsConnect_50x50.png'),
     auto;
 }
 
@@ -696,7 +647,7 @@ nav {
   background-color: #385257;
   color: #cceaf0;
   padding: 10px 0;
-  font-family: "Bebas Neue", cursive;
+  font-family: 'Bebas Neue', cursive;
   letter-spacing: 10px;
 }
 .form-container {
@@ -722,7 +673,7 @@ nav {
   margin: 5px 0;
   border: none;
   border-bottom: 1px solid #385257;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .inputs:focus {
@@ -730,7 +681,7 @@ nav {
   font-size: 16px;
 }
 .inputs::placeholder {
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 18px;
   line-height: 1.6;
   text-align: center;
@@ -738,7 +689,7 @@ nav {
 }
 
 .text-message {
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   height: 150px;
   padding: 10px;
   margin: 5px 0;
@@ -758,7 +709,7 @@ nav {
   background-color: #385257;
   color: #cceaf0;
   align-items: flex-end;
-  cursor: url("https://proportfolio.s3-us-west-1.amazonaws.com/LetsConnect_50x50.png"),
+  cursor: url('https://proportfolio.s3-us-west-1.amazonaws.com/LetsConnect_50x50.png'),
     auto;
 }
 .send-btn:focus {
@@ -787,7 +738,7 @@ nav {
 }
 
 .thanks-title {
-  font-family: "Bebas Neue", cursive;
+  font-family: 'Bebas Neue', cursive;
   letter-spacing: 1px;
   background-color: #385257;
   color: #cceaf0;
@@ -802,7 +753,7 @@ nav {
 }
 .signature {
   margin: 10px;
-  font-family: "Zeyada", cursive;
+  font-family: 'Zeyada', cursive;
   font-size: 22px;
   color: #7a9ca3;
 }
@@ -818,7 +769,7 @@ nav {
 footer {
   background: #7a9ca3;
   color: #385257;
-  font-family: "Zeyada", cursive;
+  font-family: 'Zeyada', cursive;
   font-size: 22px;
 }
 .c {
@@ -912,81 +863,6 @@ footer {
     color: #cceaf0;
   }
 
-  @keyframes flipcard {
-    10% {
-      content: "Designer";
-      letter-spacing: 1px;
-    }
-    20% {
-      content: "Entrepreneur";
-      letter-spacing: 1px;
-    }
-    25% {
-      content: "Writer";
-      letter-spacing: 1px;
-    }
-    30% {
-      content: "Coach";
-      letter-spacing: 1px;
-    }
-    35% {
-      content: "Ultrarunner";
-      letter-spacing: 1px;
-    }
-    40% {
-      content: "Creator";
-      letter-spacing: 1px;
-    }
-    41% {
-      content: "Learner";
-      letter-spacing: 1px;
-    }
-    42% {
-      content: "Thinker";
-      letter-spacing: 1px;
-    }
-    43% {
-      content: "Dreamer";
-      letter-spacing: 1px;
-    }
-    44% {
-      content: "Doer";
-      letter-spacing: 1px;
-    }
-
-    46% {
-      content: "Improviser";
-      letter-spacing: 1px;
-    }
-    47% {
-      content: "Traveler";
-      letter-spacing: 1px;
-    }
-    48% {
-      content: "Volunteer";
-      letter-spacing: 1px;
-    }
-    49% {
-      content: "Blogger";
-      letter-spacing: 1px;
-    }
-
-    50% {
-      content: "web developer";
-      font-size: 40px;
-      letter-spacing: 1px;
-    }
-    99% {
-      content: "wendy bartos";
-      letter-spacing: -2px;
-    }
-    100% {
-      content: "wendy e. bartos";
-      font-size: 60px;
-      margin-left: 280px;
-    }
-  }
-
   .content-header {
     font-size: 60px;
   }
@@ -1046,29 +922,14 @@ footer {
 }
 
 @media (min-width: 1440px) {
-  nav {
-    height: 6vh;
-  }
   .nav-links {
     width: 30%;
     height: 6vh;
   }
-  .background {
-    height: 94vh;
-  }
-  .blur {
-    background-size: contain;
-    -webkit-filter: blur(4px);
-    height: 36vh;
-  }
 
-  .mask {
-    top: 60vh;
+  #hex {
+    transform: scale(1.2);
   }
-  .header-container {
-    background-color: #7a9ca3;
-  }
-
   .skills-container {
     display: flex;
     flex-direction: row;
@@ -1165,9 +1026,9 @@ footer {
 
   .contact:hover .handle {
     display: block;
-    font-family: "Zeyada", cursive;
+    font-family: 'Zeyada', cursive;
     font-size: 20px;
-    cursor: url("https://proportfolio.s3-us-west-1.amazonaws.com/LetsConnect_50x50.png"),
+    cursor: url('https://proportfolio.s3-us-west-1.amazonaws.com/LetsConnect_50x50.png'),
       auto;
     position: absolute;
     background: #cceaf0;
