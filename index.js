@@ -111,7 +111,7 @@ const hexHovers = () => {
 const mobileHovers = () => {
   let hex = document.getElementById('hex');
 
-  hex.addEventListener('touchmove', function (event) {
+  hex.addEventListener('touchstart touchend', function (event) {
     event.preventDefault();
     event.target.classList.toggle('mobile-clear');
   });
