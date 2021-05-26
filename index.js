@@ -108,6 +108,18 @@ const hexHovers = () => {
   });
 };
 
+const setSvgViewBox = () => {
+  const svgs = document.getElementsByTagName('svg');
+  for (let i = 0, l = svgs.length; i < l; i++) {
+    let svg = svgs[i],
+      box = svg.getBBox(),
+      viewBox = [box.x, box.y, box.width, box.height].join(' ');
+
+    svg.setAttribute('viewBox', viewBox);
+    console.log(box);
+  }
+};
+
 const main = function () {
   navSlide();
   hideMenu();
@@ -115,6 +127,7 @@ const main = function () {
   closeMsg();
   castShadow();
   hexHovers();
+  setSvgViewBox();
 };
 
 $(main);
