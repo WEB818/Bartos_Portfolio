@@ -89,7 +89,7 @@ const setSvgViewBox = () => {
       orientation === 'landscape-primary' ||
       orientation === 'landscape-secondary'
     ) {
-      svg.style.transform = 'scale(0.75) rotate(90deg) translateX(-400px)';
+      svg.style.transform = 'scale(0.5) rotate(90deg) translateX(-400px)';
     } else if (
       orientation === 'portrait-primary' ||
       orientation === 'portrait-secondary'
