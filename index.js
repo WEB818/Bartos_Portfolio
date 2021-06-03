@@ -61,45 +61,73 @@ const castShadow = () => {
 };
 
 const hexHovers = () => {
-  let hex = document.getElementById('hex-mobile');
+  let hex = document.getElementById('hex-landscape');
 
   hex.addEventListener('mouseover', function (event) {
     event.target.classList.toggle('clear-hex');
     setTimeout(function () {
       event.target.classList.toggle('clear-hex');
-    }, 2000);
+    }, 4000);
   });
 };
 
 const setSvgViewBox = () => {
-  // let orientation =
-  //   (screen.orientation || {}).type ||
-  //   screen.mozOrientation ||
-  //   screen.msOrientation;
-  const svg = document.getElementById('hex-mobile');
+  let screenType =
+    screen.orientation || screen.mozOrientation || screen.msOrientation;
+
+  const svg = document.getElementById('hex');
+
   let box = svg.getBBox();
+
   let viewBox = [box.x, box.y, box.width, box.height].join(' ');
   svg.setAttribute('viewBox', viewBox);
 
-  screen.orientation.onchange = function (e) {
+  screenType.onchange = function (e) {
     let orientation = e.target.type;
-    console.log(orientation, viewBox);
 
     if (
       orientation === 'landscape-primary' ||
       orientation === 'landscape-secondary'
     ) {
-      svg.style.transform = 'scale(0.5) rotate(90deg) translateX(-400px)';
+      // svg.classList = 'landscape';
     } else if (
       orientation === 'portrait-primary' ||
       orientation === 'portrait-secondary'
     ) {
-      svg.style.transform = '';
+      // svg.classList = 'portrait';
     } else if (orientation === undefined) {
       svg.style.display = 'none';
     }
   };
 };
+
+const beeCursor = () => {
+  const beeArea = document.querySelector('#hex');
+  const titleCard = document.querySelector('.titles');
+
+  let xDir;
+  let prevX = 0;
+
+  beeArea.addEventListener('mousemove', function (e) {
+    //handle horizontal case
+    if (prevX < e.pageX) {
+      xDir = 'right';
+      beeArea.style.cursor =
+        "url('https://proportfolio.s3-us-west-1.amazonaws.com/rBee.png'),auto";
+      titleCard.style.cursor =
+        "url('https://proportfolio.s3-us-west-1.amazonaws.com/rBee.png'),auto";
+    } else {
+      xDir = 'left';
+      beeArea.style.cursor =
+        "url('https://proportfolio.s3-us-west-1.amazonaws.com/lBee.png'), auto";
+      titleCard.style.cursor =
+        "url('https://proportfolio.s3-us-west-1.amazonaws.com/lBee.png'), auto";
+    }
+
+    prevX = e.pageX;
+  });
+};
+
 const sendEmail = () => {
   $('.contact-form').submit((ev) => {
     ev.preventDefault();
@@ -148,6 +176,7 @@ const main = function () {
   castShadow();
   hexHovers();
   setSvgViewBox();
+  beeCursor();
 };
 
 $(main);
