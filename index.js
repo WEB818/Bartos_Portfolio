@@ -74,30 +74,47 @@ const hexHovers = () => {
 const setSvgViewBox = () => {
   let screenType =
     screen.orientation || screen.mozOrientation || screen.msOrientation;
-
+  let originalType = screenType.type;
   const svg = document.getElementById('hex');
+  const titles = document.querySelector('.titles');
 
+  const landscape = document.getElementById('hex-landscape');
+  const portrait = document.getElementById('hex-portrait');
+
+  let message = document.getElementById('orientation-msg');
   let box = svg.getBBox();
   let viewBox = [box.x, box.y, box.width, box.height].join(' ');
   svg.setAttribute('viewBox', viewBox);
+
+  console.log('type before refresh', originalType);
   screenType.onchange = function (e) {
     let orientation = e.target.type;
 
+    // if (orientation !== originalType) {
+    //   console.log('please refresh');
+    //   originalType = orientation;
+    //   console.log('type after refresh', originalType);
+    //   svg.style.display = 'none';
+    //   titles.style.display = 'none';
+    //   message.classList.add('message');
+    //   message.innerHTML = "Please refresh page";
+    // }
+
     if (
+      orientation === 'portrait-primary' ||
+      orientation === 'portrait-secondary'
+    ) {
+      landscape.style.display = 'none';
+      portrait.style.display = 'block';
+      console.log('orientation', orientation);
+    } else if (
       orientation === 'landscape-primary' ||
       orientation === 'landscape-secondary'
     ) {
-      svg.classList = 'landscape-container';
-      console.log(svg);
+      portrait.style.display = 'none';
+      landscape.style.display = 'block';
+      console.log('orientation', orientation);
     }
-    // else if (
-    //   orientation === 'portrait-primary' ||
-    //   orientation === 'portrait-secondary'
-    // ) {
-    //   // svg.classList = 'portrait';
-    // } else if (orientation === undefined) {
-    //   svg.style.display = 'none';
-    // }
   };
 };
 
