@@ -74,35 +74,23 @@ const hexHovers = () => {
 const setSvgViewBox = () => {
   let screenType =
     screen.orientation || screen.mozOrientation || screen.msOrientation;
+
   let originalType = screenType.type;
+
   const svg = document.getElementById('hex');
   const titles = document.querySelector('.titles');
-
-  const landscape = document.getElementById('hex-landscape');
-  const portrait = document.getElementById('hex-portrait');
-
   let message = document.getElementById('orientation-msg');
-  let landscapeBox = landscape.getBBox();
-  let viewBox = [
-    landscapeBox.x,
-    landscapeBox.y,
-    landscapeBox.width,
-    landscapeBox.height,
-  ].join(' ');
-
-  let portraitBox = portrait.getBBox();
-  let portraitViewBox = [
-    portraitBox.x,
-    portraitBox.y,
-    portraitBox.width,
-    portraitBox.height,
-  ].join(' ');
-  svg.setAttribute('viewBox', portraitViewBox);
+  let box = svg.getBBox();
+  let viewBox = [box.x, box.y, box.width, box.height].join(' ');
+  svg.setAttribute('viewBox', viewBox);
 
   console.log('type before refresh', originalType);
   screenType.onchange = function (e) {
     let orientation = e.target.type;
-
+    screen.orientation.lock(orientation);
+    if (orientation === 'portrait-primary') {
+      // console.log('');
+    }
     // if (orientation !== originalType) {
     //   console.log('please refresh');
     //   originalType = orientation;
@@ -110,26 +98,8 @@ const setSvgViewBox = () => {
     //   svg.style.display = 'none';
     //   titles.style.display = 'none';
     //   message.classList.add('message');
-    //   message.innerHTML = "Please refresh page";
+    //   message.innerHTML = 'Please refresh ';
     // }
-
-    if (
-      orientation === 'portrait-primary' ||
-      orientation === 'portrait-secondary'
-    ) {
-      landscape.style.display = 'none';
-      portrait.style.display = 'block';
-      portrait.setAttribute('viewBox', portraitViewBox);
-      console.log('orientation', orientation);
-    } else if (
-      orientation === 'landscape-primary' ||
-      orientation === 'landscape-secondary'
-    ) {
-      portrait.style.display = 'none';
-      landscape.style.display = 'block';
-      console.log('orientation', orientation);
-      landscape.setAttribute('viewBox', viewBox);
-    }
   };
 };
 
