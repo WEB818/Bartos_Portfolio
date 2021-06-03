@@ -82,9 +82,22 @@ const setSvgViewBox = () => {
   const portrait = document.getElementById('hex-portrait');
 
   let message = document.getElementById('orientation-msg');
-  let box = svg.getBBox();
-  let viewBox = [box.x, box.y, box.width, box.height].join(' ');
-  svg.setAttribute('viewBox', viewBox);
+  let landscapeBox = landscape.getBBox();
+  let viewBox = [
+    landscapeBox.x,
+    landscapeBox.y,
+    landscapeBox.width,
+    landscapeBox.height,
+  ].join(' ');
+
+  let portraitBox = portrait.getBBox();
+  let portraitViewBox = [
+    portraitBox.x,
+    portraitBox.y,
+    portraitBox.width,
+    portraitBox.height,
+  ].join(' ');
+  svg.setAttribute('viewBox', portraitViewBox);
 
   console.log('type before refresh', originalType);
   screenType.onchange = function (e) {
@@ -106,6 +119,7 @@ const setSvgViewBox = () => {
     ) {
       landscape.style.display = 'none';
       portrait.style.display = 'block';
+      portrait.setAttribute('viewBox', portraitViewBox);
       console.log('orientation', orientation);
     } else if (
       orientation === 'landscape-primary' ||
@@ -114,6 +128,7 @@ const setSvgViewBox = () => {
       portrait.style.display = 'none';
       landscape.style.display = 'block';
       console.log('orientation', orientation);
+      landscape.setAttribute('viewBox', viewBox);
     }
   };
 };
