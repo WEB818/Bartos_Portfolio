@@ -190,6 +190,11 @@ nav {
   width: 0px;
 }
 
+/* //this should only be for mobile!!!! Will lose the parallex effect otherwise */
+.landscape-container {
+  height: 100vh;
+  overflow-y: hidden;
+}
 .mouse-icon {
   display: none;
 }

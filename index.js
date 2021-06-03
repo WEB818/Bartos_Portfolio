@@ -78,10 +78,8 @@ const setSvgViewBox = () => {
   const svg = document.getElementById('hex');
 
   let box = svg.getBBox();
-
   let viewBox = [box.x, box.y, box.width, box.height].join(' ');
   svg.setAttribute('viewBox', viewBox);
-
   screenType.onchange = function (e) {
     let orientation = e.target.type;
 
@@ -89,15 +87,17 @@ const setSvgViewBox = () => {
       orientation === 'landscape-primary' ||
       orientation === 'landscape-secondary'
     ) {
-      // svg.classList = 'landscape';
-    } else if (
-      orientation === 'portrait-primary' ||
-      orientation === 'portrait-secondary'
-    ) {
-      // svg.classList = 'portrait';
-    } else if (orientation === undefined) {
-      svg.style.display = 'none';
+      svg.classList = 'landscape-container';
+      console.log(svg);
     }
+    // else if (
+    //   orientation === 'portrait-primary' ||
+    //   orientation === 'portrait-secondary'
+    // ) {
+    //   // svg.classList = 'portrait';
+    // } else if (orientation === undefined) {
+    //   svg.style.display = 'none';
+    // }
   };
 };
 
