@@ -24,11 +24,12 @@ const navSlide = () => {
 
 const hideMenu = () => {
   const navLinks = document.querySelectorAll('.nav-links li');
+
   const burger = document.getElementById('burger');
   const menuItem = document.querySelectorAll('li');
 
   menuItem.forEach((item) => {
-    item.addEventListener('click', function () {
+    item.addEventListener('click', () => {
       const nav = document.getElementById('nav-links');
       nav.classList.toggle('nav-active');
 
@@ -38,6 +39,28 @@ const hideMenu = () => {
       //Burger animation
       burger.classList.toggle('bar');
     });
+  });
+};
+
+const setActive = () => {
+  const links = document.querySelectorAll('li a');
+  let currentIndex;
+  links.forEach((link, index) => {
+    link.addEventListener('click', (e) => {
+      let prevIndex = currentIndex;
+      currentIndex = index;
+      e.target.classList.add('active');
+
+      if (currentIndex !== prevIndex) {
+        links[prevIndex].classList.remove('active');
+      }
+    });
+  });
+};
+
+const offsetLinks = () => {
+  window.addEventListener('hashchange', function () {
+    window.scrollTo(window.scrollX, window.scrollY - 100);
   });
 };
 
@@ -65,9 +88,6 @@ const hexHovers = () => {
 
   hex.addEventListener('mouseover', function (event) {
     event.target.classList.toggle('clear-hex');
-    setTimeout(function () {
-      event.target.classList.toggle('clear-hex');
-    }, 4000);
   });
 };
 
@@ -78,28 +98,18 @@ const setSvgViewBox = () => {
   let originalType = screenType.type;
 
   const svg = document.getElementById('hex');
-  const titles = document.querySelector('.titles');
-  let message = document.getElementById('orientation-msg');
+
   let box = svg.getBBox();
   let viewBox = [box.x, box.y, box.width, box.height].join(' ');
   svg.setAttribute('viewBox', viewBox);
 
-  console.log('type before refresh', originalType);
   screenType.onchange = function (e) {
     let orientation = e.target.type;
-    screen.orientation.lock(orientation);
-    if (orientation === 'portrait-primary') {
-      // console.log('');
+
+    if (orientation !== originalType) {
+      originalType = orientation;
+      location.reload();
     }
-    // if (orientation !== originalType) {
-    //   console.log('please refresh');
-    //   originalType = orientation;
-    //   console.log('type after refresh', originalType);
-    //   svg.style.display = 'none';
-    //   titles.style.display = 'none';
-    //   message.classList.add('message');
-    //   message.innerHTML = 'Please refresh ';
-    // }
   };
 };
 
@@ -176,6 +186,8 @@ const main = function () {
   sendEmail();
   closeMsg();
   castShadow();
+  setActive();
+  offsetLinks();
   hexHovers();
   setSvgViewBox();
   beeCursor();
