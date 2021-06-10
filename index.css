@@ -296,22 +296,23 @@ path {
   }
 }
 
+path:nth-child(2n) {
+  fill: #ffdb3a;
+}
 path:nth-child(3n) {
   fill: #fcce00;
 }
 
 path:nth-child(4n) {
   fill: #e4c01f;
-  stroke: #fcce00;
 }
 
 path:nth-child(5n) {
-  fill: #ffd30e;
+  fill: #eec612;
 }
 
 path:nth-child(6n) {
   fill: #d4ae04;
-  stroke: #f0e09c;
 }
 
 @media (max-width: 1024px) {
@@ -398,19 +399,13 @@ path:nth-child(6n) {
   transform: translateY(-50%) translateX(-50%);
   z-index: 10;
 }
-@media (max-width: 600px) and (orientation: landscape) {
-  .titles {
-    grid-template-columns: 60px 60px 60px;
-    grid-template-rows: 60px 60px 60px;
-    font-size: 60px;
-  }
-}
+
 @media (min-width: 1024px) {
   .titles {
-    grid-template-columns: 200px 200px 200px;
-    grid-template-rows: 200px 200px 200px;
+    grid-template-columns: 180px 180px 180px;
+    grid-template-rows: 180px 180px 180px;
     font-size: 100px;
-    gap: 30px;
+    top: 54%;
   }
   .profile {
     width: 240px;
@@ -419,6 +414,11 @@ path:nth-child(6n) {
   }
 }
 
+@media (min-width: 1440px) {
+  .titles {
+    gap: 30px;
+  }
+}
 .letter {
   display: flex;
   justify-content: center;
@@ -1189,7 +1189,7 @@ path:nth-child(6n) {
 }
 .reactjs-tech {
   opacity: 0;
-  margin-left: 100px;
+  margin: 0 80px 0 100px;
 }
 .aos-animate.sc-tech {
   -webkit-animation: styled 1s ease-out 1.5s forwards;
@@ -1456,6 +1456,7 @@ footer {
     height: 450px;
     width: 600px;
   }
+
   .tech-stack {
     justify-content: center;
   }
@@ -1509,6 +1510,13 @@ footer {
     width: 100%;
   }
 
+  a.active {
+    -webkit-transform: scale(1.5);
+    -ms-transform: scale(1.5);
+    transform: scale(1.5);
+    color: #cceaf0;
+  }
+
   .menu-item {
     padding: 10px;
   }
@@ -1544,7 +1552,6 @@ footer {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
-    align-items: space-between;
   }
 
   .feature-links {
@@ -1556,12 +1563,14 @@ footer {
   .langs,
   .feature-links,
   .links {
-    width: 20vw;
+    width: 28vw;
     margin: 0 auto;
   }
   .links {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
     margin-bottom: 2px;
   }
   .links:hover {
@@ -1739,13 +1748,5 @@ footer {
 @media (min-width: 2560px) {
   .swiper-container {
     width: 50vw;
-  }
-}
-@media (min-width: 1024px) {
-  a.active {
-    -webkit-transform: scale(1.5);
-    -ms-transform: scale(1.5);
-    transform: scale(1.5);
-    color: #cceaf0;
   }
 }
